@@ -1,63 +1,18 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+
 
 const Dashboard = () => {
   return (
-    <>
-      <div className="grid grid-cols-12  h-[800px]">
-        <h1 className="bg-red-700 col-span-2">Element 2</h1>
-        <h1 className="bg-amber-400 col-span-10 ">
-          <div className="grid gap-1 grid-cols-4 mt-2 ml-2">
-            <h1>
-              {" "}
-              <a
-                href="#"
-                class="block max-w-xs  py-5 px-10 relative bg-white border border-gray-200 rounded-sm shadow  dark:border-gray-700 ">
-                <FontAwesomeIcon
-                  className="absolute top-5 left-0"
-                  icon={faCartPlus}
-                />
-                <h1>Total Order</h1>
-              </a>
-            </h1>
-            <h1>
-              <a
-                href="#"
-                class="block max-w-xs py-5 px-10 relative bg-white border border-gray-200 rounded-sm shadow  dark:border-gray-700 ">
-                <FontAwesomeIcon
-                  className="absolute top-5 left-0"
-                  icon={faCartPlus}
-                />
-                <h1>Total Order</h1>
-              </a>
-            </h1>
-            <h1>
-              <a
-                href="#"
-                class="block max-w-xs  py-5 px-10 relative bg-white border border-gray-200 rounded-sm shadow  dark:border-gray-700 ">
-                <FontAwesomeIcon
-                  className="absolute top-5 left-0"
-                  icon={faCartPlus}
-                />
-                <h1>Total Order</h1>
-              </a>
-            </h1>
-            <h1>
-              <a
-                href="#"
-                class="block max-w-xs  py-5 px-10 relative bg-white border border-gray-200 rounded-sm shadow  dark:border-gray-700 ">
-                <FontAwesomeIcon
-                  className="absolute top-5 left-0"
-                  icon={faCartPlus}
-                />
-                <h1>Total Order</h1>
-              </a>
-            </h1>
-          </div>
-        </h1>
-      </div>
-    </>
+    <div>
+    <div className="grid grid-cols-12  grid-rows-6 h-[600px]">
+      <h1 className="bg-zinc-500  col-start-3 border  border-neutral-900 col-end-13">Element 1</h1>
+      <h1 className="bg-red-700 row-start-2 row-end-5 border  border-neutral-900 col-start-1 col-end-3">Element 2</h1>
+      <h1 className="bg-orange-800 row-start-1 row-end-2 border  border-neutral-900 col-start-1 col-end-3">Element 3</h1>
+      <h1 className="bg-yellow-700 col-start-3 col-end-13 border  border-neutral-900 row-start-2 row-end-4">Element 4</h1>
+      <h1 className="bg-lime-800 col-start-3 border  border-neutral-900 col-end-13">Element 5</h1>
+    </div>
+    </div>
+
   );
 };
 
