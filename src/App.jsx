@@ -17,20 +17,10 @@ function App() {
   return (
     <>
     <Section />
-      {/* <Navbar />
-      <Search />
-      <Card />
-      <Carditem />
-      <Product /> */}
     </>
   );
 }
-// const router = createBrowserRouter([
-//   {
-//     path : "/",
-//     element : <Navbar />
-//   }
-// ]);
+
 
 
 export default App;
