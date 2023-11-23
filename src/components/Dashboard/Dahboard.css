@@ -1,0 +1,35 @@
+.menu-arrow {
+    display: flex;
+    text-rendering: auto;
+    line-height: 40px;
+    font-size: 18px;
+    line-height: 18px;
+    background: rgba(27, 41, 80, 0.04);
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.menu-arrow::before {
+    height: 5px;
+    width: 5px;
+    border-top: 0;
+    content: "";
+    border-left: 0;
+    border-right: 1px solid #67748E;
+    border-bottom: 1px solid #67748E;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}

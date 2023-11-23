@@ -3,8 +3,8 @@ import Header from "./Header";
 const Section = () => {
     return (
         <>
-            <Header />
-            <Dashboard />
+            {/* <Header />
+            <Dashboard /> */}
         </>
         
     );

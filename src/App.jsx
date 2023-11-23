@@ -1,4 +1,5 @@
 import "./App.css";
+import Header from "./components/Dashboard/Header";
 // import { createRoot } from "react-dom/client";
 // import {
 //   createBrowserRouter,
@@ -12,11 +13,10 @@ import "./App.css";
 // import Carditem from "./components/Carditem";
 // import Product from "./components/Product";
 // import {logo} from './assets/banner.jpg'
-import  Section from "./components/Dashboard/section";
 function App() {
   return (
     <>
-    <Section />
+      <Header />
     </>
   );
 }
