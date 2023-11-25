@@ -16,7 +16,7 @@ const Header = () => {
         <>
         <div className=' header w-full flex'>
 
-              <div style={click ? {width:"85px"}: {}}  className='header-left ml-[59px;] px-5 py-0 relative w-[260px] h-[60px]'>
+              <div style={click ? {width:"40px"}: {}}  className='header-left ml-[59px;] px-5 py-0 relative w-[260px] h-[60px]'>
                     <a><img className='w-[140px]' src={logo} /></a>
                     <a className=' absolute top-4 right-[-10px]'>
                     <div className='text-white  w-5 h-5 bg-amber-600 rounded-full'>

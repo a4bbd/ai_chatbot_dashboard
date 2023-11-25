@@ -5,18 +5,21 @@ const Dashboard = ({click}) => {
 	const [toggle,setToggle] = useState(false);
   return (
     <div>
-    <div className="grid grid-cols-12  grid-rows-6 h-full ">
-      <h1 className="bg-red-700 row-start-1 row-end-[-1] border p-5 border-slate-200 col-start-1 col-end-3">
-      <div id="sidebar-menu" class="sidebar-menu">
+    {/* <div className="grid grid-cols-12  grid-rows-6  h-full "> */}
+	<div className="h-full flex">
+      {/* <h1 className=  "  bg-red-700    flow      row-start-1 row-end-[-1] border p-5 border-slate-200 col-start-1 col-end-3"> */}
+	  <h1 className=  " w-[331px]  bg-red-700 flow border p-5 border-slate-200 ">
+
+      <div id="sidebar-menu" className="">
 						<ul>
 							<li class="submenu-open">
 								<h6 class="submenu-hdr">Main</h6>
 								<ul className="p-3">
-									<li class="active">
+									{click? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> :  <li class="active">
 										<a href="index.html" className=" pt-2 pb-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg><span>Dashboard</span></a>
-									</li>
+									</li>}
 									<li class="submenu">
-										<a className="flex relative items-center gap-3" href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg><span >Application</span><span className="menu-arrow" onClick={()=>setToggle(!toggle)}></span></a>
+									{click ? <a className="flex relative items-center gap-3" href="javascript:void(0);"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></a> :	<a className="flex relative items-center gap-3" href="javascript:void(0);"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> <span >Application</span><span className="menu-arrow" onClick={()=>setToggle(!toggle)}></span></a>}
 										{
 											toggle && (
 											<ul className=" transition duration-700 ease-in-out pt-3 pb-3 ml-4">
@@ -98,14 +101,17 @@ const Dashboard = ({click}) => {
 							</li>			
 						</ul>
 					</div>
-
+					<div className="slimScrollBar"></div>
 
 
 
       </h1>
-      <h1  className="bg-yellow-700 col-start-3 col-end-13 border-l-1  border-slate-200 row-start-1 row-end-[-1]">Element 4</h1>
-	  {click && <h1  className="bg-yellow-700 col-start-2 col-end-13 border-l-1  border-slate-200 row-start-1 row-end-[-1]">Element 4</h1>}
-      <h1 className="bg-yellow-700 col-start-1 col-end-[-1] border  border-slate-200 ">Footer</h1>
+      {/* <h1  className="bg-yellow-700 col-start-3 col-end-13 border-l-1  border-slate-200 row-start-1 row-end-[-1]"></h1> */}
+	  <h1  className="bg-yellow-700 w-full border-l-1  border-slate-200 ">Element 1</h1>
+	  {click && <h1  className="bg-yellow-700 w-[378%]  border-l-1  border-slate-200 ">Element1</h1> }
+
+	  {/* {click && <h1  className="bg-yellow-700 col-start-2 col-end-13 border-l-1  border-slate-200 row-start-1 row-end-[-1]">Element 4</h1> } */}
+      {/* <h1 className="bg-yellow-700 col-start-1 col-end-[-1] border  border-slate-200 ">Footer</h1> */}
 
     </div>
     </div>
