@@ -111,7 +111,31 @@
   align-items: center;
   justify-content: center;
 }
-  
+#toggle_btn {
+  position: absolute;
+    opacity: 1;
+    background: #FF9F43;
+    right: -13px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    top: 18px;
+}
+#toggle_btn:hover {
+  background: #fe820e;
+}
+#toggle_btn svg{
+  width: 16px;
+}
+.search svg{
+  width: 15px;
+  height: 15px;
+}
+
   /* .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   } */

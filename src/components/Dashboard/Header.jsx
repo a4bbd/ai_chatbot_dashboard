@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../assets/logo.png'
-import man from "../../assets/man.jpg"
+import man from "../../assets/man.jpg";
+import logosmall from "../../assets/logo-small.png"
 import "./Header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe,faExpand,faEnvelope,faBell,faGear, faL } from '@fortawesome/free-solid-svg-icons'
@@ -8,29 +9,36 @@ import us from '../../assets/rsz_us_flag.png';
 import bd from '../../assets/bd.png';
 import logout from '../../assets/log-out.svg'
 import Dashboard from './Dashboard';
-import FullScreen from './Fullscreen';
+import FullScreen from '../../pages/Fullscreen';
 const Header = () => {
     const [click ,setClick] = useState();
     const[porfile,setProfile] = useState(false);
     return (
         <>
-        <div className=' header w-full flex'>
-
-              <div style={click ? {width:"40px"}: {}}  className='header-left ml-[59px;] px-5 py-0 relative w-[260px] h-[60px]'>
-                    <a><img className='w-[140px]' src={logo} /></a>
-                    <a className=' absolute top-4 right-[-10px]'>
+        <div className='  header w-full flex'>
+                {/* width:"40px" */}
+              <div style={click ? {width:"52px"}: {}}  className='header-left ml-[59px;] px-5 py-0 relative w-[256px] h-[60px]'>
+                    <a>{ click ? <img className='flex justify-content content-center' src={logosmall} /> : <img className='w-[140px] ' src={logo} /> } </a>
+                     
+                    {/* <a className=' absolute top-4 right-[-10px]'>
                     <div className='text-white  w-5 h-5 bg-amber-600 rounded-full'>
                     <svg onClick={()=>setClick(!click)} className='w-4 text-center text-black top-3 left-3' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left feather-16"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
                     </div>
-                    </a>
+                    </a> */}
+                    <a id="toggle_btn"  className="cursor-default scroll-smooth active">
+						<svg style={click ? {transform : "rotate(180deg)"} : {} }
+                         onClick={()=> setClick(!click)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left feather-16"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+					</a>
                </div>
                
-              <ul className='flex border  justify-between content-center w-full border-slate-200'>
-                   <li className=' items-center ml-5'>
-                         <input type='text' placeholder='Search' className='border-2 outline-none font-sans pr-4 bg-slate-100  border-slate-200  rounded-[50px] relative w-60 h-9 p-2 m-2' />
-                            {/* <span>
-                            <svg className='absolute top-0 left-1' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search feather-14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                            </span> */}
+              <ul   className='flex border mt-[-1px]   justify-between content-center w-full border-slate-200'>
+                   <li className=' relative mt-1 items-center ml-5'>
+                         <input type='text' placeholder='Search' className='border-2 outline-none font-sans  bg-slate-100  border-slate-200  rounded-[50px]  w-60 h-9 pb-0 pt-0 pl-9 pr-10  m-2'  /> 
+                         {/* absolute top-3 left-3 opacity-50  */}
+
+
+                         <span className='search absolute top-5 left-5 opacity-50'><svg 
+                         className='' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search feather-14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
                    </li>
                    <div className='list-none items-center mr-4 flex justify-center content-center gap-9'>
                    <li className=''>
