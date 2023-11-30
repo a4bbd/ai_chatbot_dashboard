@@ -67,6 +67,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+.maincontainer{
+  display: flex;
+}
+.menuContainer{
+  width: 18%;
+}
+.contentContainer{
+  
+  padding: 25px;
+}
+
+
 html{
   scroll-behavior: smooth;
 }

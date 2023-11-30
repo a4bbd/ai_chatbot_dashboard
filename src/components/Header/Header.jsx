@@ -8,16 +8,18 @@ import { faGlobe,faExpand,faEnvelope,faBell,faGear, faL } from '@fortawesome/fre
 import us from '../../assets/rsz_us_flag.png';
 import bd from '../../assets/bd.png';
 import logout from '../../assets/log-out.svg'
-import Dashboard from './Dashboard';
-import FullScreen from '../../pages/Fullscreen';
-const Header = () => {
+import Fullscreen from "../../pages/Fullscreen/Fullscreen"
+// import Menubar from '../Menubar/Menubar';
+const Header = ({getValue}) => {
     const [click ,setClick] = useState();
     const[porfile,setProfile] = useState(false);
+
+    getValue(click);
     return (
         <>
         <div className='  header w-full flex'>
                 {/* width:"40px" */}
-              <div style={click ? {width:"52px"}: {}}  className='header-left ml-[59px;] px-5 py-0 relative w-[256px] h-[60px]'>
+              <div style={click ? {width:"50px"}: {}}  className='header-left ml-[58px;] px-5 py-0 relative w-[253px] h-[60px]'>
                     <a>{ click ? <img className='flex justify-content content-center' src={logosmall} /> : <img className='w-[140px] ' src={logo} /> } </a>
                      
                     {/* <a className=' absolute top-4 right-[-10px]'>
@@ -65,7 +67,7 @@ const Header = () => {
 					</li>
                     <li class="nav-item nav-item-box">
 						<a className="h-10 w-10 block relative bg-slate-100 rounded" href="javascript:void(0);" id="btnFullscreen">
-                          <FullScreen />
+                          <Fullscreen />
 						</a> 
                         
 					</li>
@@ -133,7 +135,8 @@ const Header = () => {
               </ul>
               
         </div>
-        <Dashboard click={click} />
+        
+        {/* <Menubar click={click} /> */}
         </>
     );
 };

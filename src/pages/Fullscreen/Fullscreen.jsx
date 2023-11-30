@@ -2,7 +2,7 @@ import screenfull from "screenfull";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExpand} from '@fortawesome/free-solid-svg-icons'
 
-const FullScreen = () => {
+const Fullscreen = () => {
     const handleClick = ()=>{
        if(screenfull.isEnabled){
          if(screenfull.isFullscreen){
@@ -22,4 +22,4 @@ const FullScreen = () => {
     );
 };
 
-export default FullScreen;
+export default Fullscreen;
