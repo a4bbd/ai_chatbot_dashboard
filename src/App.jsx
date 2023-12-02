@@ -22,7 +22,7 @@ function App() {
              <Menubar click={click}  />
           </div>
           {/* style={click ? {width: "110px"}:{width: "300px"}} */}
-         <div style={click ? {width : "214%",transition : ".5s"}:{width: "84%",transition : ".5s"}} className="contentContainer">
+         <div style={click ? {width : "214%",transition : ".5s"}:{width: "84%",transition : ".5s"}} className="contentContainer bg-slate-50">
              <Outlet />
          </div>
         </div>
