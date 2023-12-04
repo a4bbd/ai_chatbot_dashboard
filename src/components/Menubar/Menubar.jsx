@@ -29,10 +29,10 @@ const Menubar = ({click}) => {
 									<span className="menu-arrow" onClick={()=>setToggle(!toggle)}></span></a> </Link>}
 										{
 											toggle && (
-											<ul className=" transition duration-700 ease-in-out pt-3 pb-3 ml-4">
-											<li><a >Chat</a></li>
-											<li><a >Calendar</a></li>
-											<li><a >Email</a></li>
+											<ul className="  transition duration-700 ease-in-out pt-3 pb-3 ml-4">
+											<Link to={"/chat"}><li><a className="cursor-default transition text-orange-300 duration-400 pt-3 pb-3 hover:text-orange-300" >Chat</a></li></Link>
+											<li><a className="cursor-default transition duration-400 pt-3 pb-3 hover:text-orange-300" >Calendar</a></li>
+											<li><a className="cursor-default transition  duration-400 pt-3 pb-3 hover:text-orange-300">Email</a></li>
 										    </ul>
 											)
 										}

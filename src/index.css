@@ -69,7 +69,11 @@ body{
   height: 50px;
   color: white;
 }
-
+.photo_radious{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 
 html{
   scroll-behavior: smooth;

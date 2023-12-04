@@ -5,11 +5,14 @@ import {
   faCreditCard,
   faMoneyBill,
   faEllipsisVertical,
+  faEye,
+  faDownload,
 } from "@fortawesome/free-solid-svg-icons";
-import product22 from "../../assets/product22.jpg"
+import product22 from "../../assets/product22.jpg";
 import totalOrder from "../../assets/total_order.svg";
 import "./home.css";
 import Example from "../../components/Recharts/Chart";
+import Burger from "../../assets/burger.jpg"
 const Home = () => {
   return (
     <div>
@@ -211,9 +214,9 @@ const Home = () => {
       </div>
 
       <div className="">
-        <div className="grid mt-7  grid-cols-5 gap-2">
-          <div className="border p-3 col-span-3 rounded-md ">
-            <div className="flex justify-between">
+        <div className="grid mt-7  grid-cols-8 gap-4">
+          <div className="border p-3 col-span-6 rounded-md ">
+            {/* <div className="flex justify-between">
               <h1 className="text-lg font-bold">Purchase & Sales</h1>
               <div className="flex gap-3 ">
                 <h1 className="flex gap-2 justify-center items-center">
@@ -287,50 +290,662 @@ const Home = () => {
                   </div>
                 </p>
               </div>
-            </div>
-            <div className="h-[350px] mt-4">
+            </div> */}
+            {/* <div className="h-[350px] mt-4">
               <Example />
             </div>
+            <div className=" mt-4">
+
+
+            </div> */}
+            <div className="flex justify-between">
+              <div class="col mb-3 mb-xl-0">
+                <h5 className="text-base font-semibold">Last Orders</h5>
+                <p style={{ color: "#6c757d" }} class="m-0 text-muted">
+                  Quick management of the last 5 orders
+                </p>
+              </div>
+              <div class="">
+                <div className="">
+                  <ul className="flex">
+                    <li className="bg-emerald-500 text-xs   text-white rounded">
+                      <a className="text-center py-1 px-3">All</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link text-emerald-500 py-1 px-3">Pending</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link py-1 text-emerald-500 px-3">
+                        Processing
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link py-1 text-emerald-500 px-3">
+                        Completed
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <table class="table mt-5 w-full">
+              <thead>
+                <tr className="border border-slate-300 border-b-1">
+                  <th class="p-0 mw-200"></th>
+                  <th class="p-0 mw-200"> </th>
+                  <th class="p-0 mw-200"></th>
+                  <th class="p-0 mw-200"></th>
+                  <th class="p-0 mw-200"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b-2 border-slate-300 ">
+                  <td className="align-middle p-3 ">
+                    <div class="d-flex align-items-center">
+                      <div class="mr-2"></div>
+                      <div>
+                        <div>
+                          <a
+                            href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=42af63ba-9173-11ee-b2ff-2e3da68cc847"
+                            className="text-emerald-500 font-weight-bold hover:text-blue-950 mb-1">
+                            Order #16447
+                          </a>
+                        </div>
+                        <div>
+                          {" "}
+                          <a
+                            style={{ color: "#6c757d" }}
+                            className="font-bold text-muted font-weight-bold hover-text-primary"
+                            href="javascript:;">
+                            Billy Joe
+                          </a>
+                        </div>
+                        <div className="text-xs">6 hours ago</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td width="15%" class="text-left align-middle">
+                    Jollibee
+                  </td>
+                  <td class="text-right align-middle">
+                    <span className="font-bold block">$134.40</span>
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-blue-900 text-center text-white font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      unpaid
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <div>Pickup</div>
+                    <span
+                      style={{ color: "#6c757d" }}
+                      class="text-muted font-weight-500">
+                      Cash On delivery
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-pink-400 text-center color-white text-white font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      rejected
+                    </span>
+                  </td>
+                  <td class="text-right align-middle pr-0">
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=42af63ba-9173-11ee-b2ff-2e3da68cc847"
+                      className="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faEye}
+                      />
+                    </a>
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/preprint/pdf?order_uuid=42af63ba-9173-11ee-b2ff-2e3da68cc847"
+                      target="_blank"
+                      class="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faDownload}
+                      />
+                    </a>
+                  </td>
+                </tr>
+
+                <tr className="border-b-2 border-slate-300 ">
+                  <td class="p-3  align-middle">
+                    <div class="d-flex align-items-center">
+                      <div class="mr-2">
+                        <div class="blob red"></div>
+                      </div>
+                      <div>
+                        <div>
+                          <a
+                            href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=0e8ed840-9172-11ee-b2ff-2e3da68cc847"
+                            class="text-emerald-500 font-weight-bold hover:text-blue-950 mb-1">
+                            Order #16446
+                          </a>
+                        </div>
+                        <div>
+                          <a
+                            style={{ color: "#6c757d" }}
+                            className="font-bold text-muted font-weight-bold hover-text-primary">
+                            Joe Sawyer
+                          </a>
+                        </div>
+                        <div className="text-xs">14 hours ago</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td width="15%" class="text-left align-middle">
+                    McDonald's
+                  </td>
+                  <td class="text-right align-middle">
+                    <span className="font-bold block">$200.00</span>
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-yellow-300 text-center text-black font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      paid
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <div>Pickup</div>
+                    <span
+                      style={{ color: "#6c757d" }}
+                      class="text-muted font-weight-500">
+                      Cash On delivery
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-lime-500 text-center text-white font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      Completed
+                    </span>
+                  </td>
+                  <td class="text-right align-middle pr-0">
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=0e8ed840-9172-11ee-b2ff-2e3da68cc847"
+                      className="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faEye}
+                      />
+                    </a>
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/preprint/pdf?order_uuid=0e8ed840-9172-11ee-b2ff-2e3da68cc847"
+                      target="_blank"
+                      className="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faDownload}
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-slate-300 ">
+                  <td class="p-3  align-middle">
+                    <div class="d-flex align-items-center">
+                      <div class="mr-2">
+                        <div class="blob red"></div>
+                      </div>
+                      <div>
+                        <div>
+                          <a
+                            href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=91f73eb0-911a-11ee-b2ff-2e3da68cc847"
+                            class="text-emerald-500 font-weight-bold hover:text-blue-950 mb-1">
+                            Order #16439
+                          </a>
+                        </div>
+                        <div>
+                          <a
+                            style={{ color: "#6c757d" }}
+                            className="font-bold text-muted font-weight-bold hover-text-primary">
+                            Chico Rose
+                          </a>
+                        </div>
+                        <div className="text-xs">Yesterday</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td width="15%" class="text-left align-middle">
+                    McDonald's
+                  </td>
+                  <td class="text-right align-middle">
+                    <span className="font-bold block">$121.00</span>
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-yellow-300 text-center text-black font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      pay
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <div>Dinein</div>
+                    <span
+                      style={{ color: "#6c757d" }}
+                      class="text-muted font-weight-500">
+                      Pay on delivery
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-emerald-300 text-center text-black font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      new
+                    </span>
+                  </td>
+                  <td class="text-right align-middle pr-0">
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=91f73eb0-911a-11ee-b2ff-2e3da68cc847"
+                      class="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faEye}
+                      />
+                    </a>
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/preprint/pdf?order_uuid=91f73eb0-911a-11ee-b2ff-2e3da68cc847"
+                      target="_blank"
+                      class="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faDownload}
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-slate-300 ">
+                  <td class="p-3  align-middle">
+                    <div class="d-flex align-items-center">
+                      <div class="mr-2">
+                        <div class="blob green mb-1"></div>
+                        <div class="blob red"></div>
+                      </div>
+                      <div>
+                        <div>
+                          <a
+                            href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=192b47e9-913e-11ee-b2ff-2e3da68cc847"
+                            class="text-emerald-500 font-weight-bold hover:text-blue-950 mb-1">
+                            Order #16445
+                          </a>
+                        </div>
+                        <div>
+                          <a
+                            style={{ color: "#6c757d" }}
+                            className="font-bold text-muted font-weight-bold hover-text-primary">
+                            Dharmaraj Rathod
+                          </a>
+                        </div>
+                        <div className="text-xs">Yesterday</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td width="15%" class="text-left align-middle">
+                    McDonald's
+                  </td>
+                  <td class="text-right align-middle">
+                    <span className="font-bold block">$54.59</span>
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-blue-900 text-center text-white font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      unpaid
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <div>Pickup</div>
+                    <span
+                      style={{ color: "#6c757d" }}
+                      class="text-muted font-weight-500">
+                      Cash On delivery
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-emerald-300 text-center text-black font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      new
+                    </span>
+                  </td>
+                  <td class="text-right align-middle pr-0">
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=192b47e9-913e-11ee-b2ff-2e3da68cc847"
+                      class="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faEye}
+                      />
+                    </a>
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/preprint/pdf?order_uuid=192b47e9-913e-11ee-b2ff-2e3da68cc847"
+                      target="_blank"
+                      class="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faDownload}
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3  align-middle">
+                    <div class="d-flex align-items-center">
+                      <div class="mr-2">
+                        <div class="blob green mb-1"></div>
+                        <div class="blob red"></div>
+                      </div>
+                      <div>
+                        <div>
+                          <a
+                            href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=a4417edc-9128-11ee-b2ff-2e3da68cc847"
+                            class="text-emerald-500 font-weight-bold hover:text-blue-950 mb-1">
+                            Order #16441
+                          </a>
+                        </div>
+                        <div>
+                          <a
+                            style={{ color: "#6c757d" }}
+                            className="font-bold text-muted font-weight-bold hover-text-primary">
+                            Kaua Torres
+                          </a>
+                        </div>
+                        <div className="text-xs">Yesterday</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td width="15%" class="text-left align-middle">
+                    McDonald's
+                  </td>
+                  <td class="text-right align-middle">
+                    <span className="font-bold block">$141.08</span>
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-yellow-300 text-center text-black font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      paid
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <div>Pickup</div>
+                    <span
+                      style={{ color: "#6c757d" }}
+                      class="text-muted font-weight-500">
+                      Mercadopago
+                    </span>
+                  </td>
+                  <td class="text-right align-middle">
+                    <span
+                      style={{ fontSize: "75%" }}
+                      className=" bg-emerald-300 text-center text-black font-semibold pt-0.5 pb-0.5 pl-0.5 pr-0.5 leading-none rounded">
+                      new
+                    </span>
+                  </td>
+                  <td class="text-right align-middle pr-0">
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/order/view?order_uuid=a4417edc-9128-11ee-b2ff-2e3da68cc847"
+                      class="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faEye}
+                      />
+                    </a>
+                    <a
+                      href="https://demo.bastisapp.com/backoffice/preprint/pdf?order_uuid=a4417edc-9128-11ee-b2ff-2e3da68cc847"
+                      target="_blank"
+                      class="w-10 h-12 p-2 bg-slate-100 rounded-md hover:bg-slate-200  px-4 mr-2">
+                      <FontAwesomeIcon
+                        style={{ color: "#6c757d" }}
+                        icon={faDownload}
+                      />
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            {/* <div class="d-block d-sm-none text-right">
+                  <div class="dropdown btn-group dropleft">
+                    <button
+                      class="btn btn-sm dropdown-togglex dropleft"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      <i class="zmdi zmdi-more-vert"></i>
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item active">All</a>
+                      <a class="dropdown-item">Processing</a>
+                      <a class="dropdown-item">Ready</a>
+                      <a class="dropdown-item">Completed</a>
+                    </div>
+                  </div>
+                </div> */}
           </div>
+
           <div className="border p-3 col-span-2 rounded-md">
             <div className="flex justify-between">
-              <h1>Recently Added Products</h1>
+              <h1 className="text-lg font-bold">Top Selling Products</h1>
               <a>
                 <FontAwesomeIcon icon={faEllipsisVertical} />
               </a>
             </div>
 
-            <table className="table-fixed mt-5 w-full">
-  <thead>
-    <tr>
-      <th className="float-left" >Serial No</th>
-      <th className="text-left" >Products</th>
-      <th className="text-left ">Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <td className="sorting_1">1</td>
-													<td className="flex">
-														<a href="productlist.html" className="product-img">
-															<img src={product22} alt="product" />
-														</a>
-														<a href="productlist.html" className="">Apple Earpods</a>
-													</td>
-	 	<td>$891.2</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>The Eagles</td>
-      <td>1972</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
-    </tr>
-  </tbody>
-</table>
+
+
+            <table className="mt-4">
+              <thead>
+                <tr className="border border-slate-300 border-b-1">
+                  <th class="p-0 mw-200"></th>
+                  <th class="p-0 mw-200"></th>
+                </tr>
+              </thead>
+              <tbody className="">
+                <tr className="border-b-2 border-slate-300">
+                  <td className="pt-2 pb-2  text-left align-middle">
+                    <div className="flex">
+                      <div class="mr-3">
+                        <a>
+                          <img
+                            src={Burger}
+                            className="photo_radious"
+                          />
+                        </a>
+                      </div>
+                      <div class="flex-col">
+                        <a
+                          href="javascript:;"
+                          class="font-weight-bold hover-text-primary mb-1">
+                          Sandwich
+                        </a>
+                        <div>
+                          <small class="text-muted">
+                           Since Sun, January 30
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right align-middle">
+                    <p class="m-0 text-muted">303 orders</p>
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-slate-300">
+                  <td className="pt-2 pb-2  text-left align-middle">
+                    <div class="flex">
+                      <div class="mr-3">
+                        <a>
+                          <img
+                            src={Burger}
+                            className="photo_radious"
+                          />
+                        </a>
+                      </div>
+                      <div class="flex-col">
+                        <a
+                          href="javascript:;"
+                          class="font-weight-bold hover-text-primary mb-1">
+                          john Doe
+                        </a>
+                        <div>
+                          <small class="text-muted">
+                          Since Sun, January 30
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right align-middle">
+                    <p class="m-0 text-muted">69 orders</p>
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-slate-300">
+                  <td className="pt-2 pb-2  text-left align-middle">
+                    <div class="flex">
+                      <div class="mr-3">
+                        <a>
+                          <img
+                            src={Burger}
+                            className="photo_radious"
+                          />
+                        </a>
+                      </div>
+                      <div class="flex-col">
+                        <a
+                          href="javascript:;"
+                          class="font-weight-bold hover-text-primary mb-1">
+                          Steak
+                        </a>
+                        <div>
+                          <small class="text-muted">
+                          Since Sun, January 30
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right align-middle">
+                    <p class="m-0 text-muted">58 orders</p>
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-slate-300">
+                  <td className="pt-2 pb-2  text-left align-middle">
+                    <div class="flex">
+                      <div class="mr-3">
+                        <a>
+                          <img
+                            src={Burger}
+                            className="photo_radious"
+                          />
+                        </a>
+                      </div>
+                      <div class="flex-col">
+                        <a
+                          href="javascript:;"
+                          class="font-weight-bold hover-text-primary mb-1">
+                          Tuna Steak
+                        </a>
+                        <div>
+                          <small class="text-muted">
+                          Since Sun, January 30
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right align-middle">
+                    <p class="m-0 text-muted">58 orders</p>
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-slate-300">
+                  <td className="pt-2 pb-2  text-left align-middle">
+                    <div class="flex">
+                      <div class="mr-3">
+                        <a>
+                          <img
+                            src={Burger}
+                            className="photo_radious"
+                          />
+                        </a>
+                      </div>
+                      <div class="flex-col">
+                        <a
+                          href="javascript:;"
+                          class="font-weight-bold hover-text-primary mb-1">
+                          Shrimp
+                        </a>
+                        <div>
+                          <small class="text-muted">
+                          Since Sun, January 30
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right align-middle">
+                    <p class="m-0 text-muted">45 orders</p>
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-slate-300">
+                  <td className="pt-2 pb-2  text-left align-middle">
+                    <div class="flex">
+                      <div class="mr-3">
+                        <a>
+                          <img
+                            src={Burger}
+                            className="photo_radious"
+                          />
+                        </a>
+                      </div>
+                      <div class="flex-col">
+                        <a
+                          href="javascript:;"
+                          class="font-weight-bold hover-text-primary mb-1">
+                          Cake
+                        </a>
+                        <div>
+                          <small class="text-muted">
+                          Since Sun, January 30
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right align-middle">
+                    <p class="m-0 text-muted">45 orders</p>
+                  </td>
+                </tr>
+                <tr className="">
+                  <td className="pt-2 pb-2  text-left align-middle">
+                    <div class="flex">
+                      <div class="mr-3">
+                        <a>
+                          <img
+                            src={Burger}
+                            className="photo_radious"
+                          />
+                        </a>
+                      </div>
+                      <div class="flex-col">
+                        <a
+                          href="javascript:;"
+                          class="font-weight-bold hover-text-primary mb-1">
+                          Burger
+                        </a>
+                        <div>
+                          <small class="text-muted">
+                          Since Sun, January 30
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right align-middle">
+                    <p class="m-0 text-muted">45 orders</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
