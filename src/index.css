@@ -74,6 +74,12 @@ body{
   height: 60px;
   border-radius: 50%;
 }
+.photo_radious_chat{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 html{
   scroll-behavior: smooth;

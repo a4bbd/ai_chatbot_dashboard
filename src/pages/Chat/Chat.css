@@ -1,0 +1,40 @@
+.chat__scrollbar{
+    height: 88vh;
+    overflow-y: scroll;
+  }
+  .chat__scrollbar::-webkit-scrollbar {
+    width: 5px;  
+  }
+  
+  .chat__scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+  }
+  .chat__scrollbar::-webkit-scrollbar-thumb {
+    background: #F97316;
+    opacity: 0.1;
+    border-radius: 100vh;
+  }
+
+.list-unstyled{
+    height: 80vh;
+    overflow-y: scroll;
+  }
+  .list-unstyled::-webkit-scrollbar {
+    width: 5px;  
+  }
+  
+  .list-unstyled::-webkit-scrollbar-track {
+    border-radius: 100vh;
+  }
+  .list-unstyled::-webkit-scrollbar-thumb {
+    background: #F97316;
+    opacity: 0.1;
+    border-radius: 100vh;
+  }
+  .user_img{
+    height: 45px;
+    min-width: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1.5px solid #FF9F43;
+  }

@@ -6,6 +6,7 @@ import Menubar from "./components/Menubar/Menubar"
 import Chat from "./pages/Chat/chat";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
+import Products from "./pages/Products/Products";
 function App() {
   const Layout = ()=>{
 
@@ -39,14 +40,15 @@ function App() {
           path : "/",
           element : <Home />
         },
-        {
-          path : "/application",
-          element : <Application />
-        },
+        ,
         {
           path: "/chat",
           element: <Chat />,
         },
+        {
+           path:"/products",
+           element: <Products />
+        }
 
       ]
     },

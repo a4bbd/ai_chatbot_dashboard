@@ -97,6 +97,8 @@ const Header = ({getValue}) => {
                     <li class="">
 						<a className="h-10 w-10 block relative bg-slate-100 rounded" href="generalsettings.html">
                         <FontAwesomeIcon className='hover:text-amber-500 opacity-50 absolute top-[10px] right-[9px]' icon={faGear} size='lg' />
+                        <span class="badge rounded-pill">3</span>
+
                         </a>
 					</li>
                     <div className='userinfo mr-4' >
