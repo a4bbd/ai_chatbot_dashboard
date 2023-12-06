@@ -1,0 +1,35 @@
+.table {
+    /* font-family: "Roboto","Helvetica","Arial",sans-serif; */
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    color: black;
+    background: white;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 1rem;
+}
+ th{
+       margin-top: 12px;
+       margin-bottom: 12px;
+       background-color: #FAFBFE;
+       color: black;
+    }
+
+    /* tr:nth-child(even){
+       background-color: #f2f2f2;
+    } */
+    tr:hover{
+       background-color: #ddd;
+    }
+    th,td{
+     padding: 8px;
+     text-align: left;
+     border-bottom: 1px solid #ddd; 
+    }
+
+    
