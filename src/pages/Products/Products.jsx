@@ -1,6 +1,7 @@
 import React from 'react';
 import "./products.css";
-
+import search from "../../assets/search-white.svg";
+import filter from "../../assets/filter.svg";
 import category1 from "../../assets/category1.jpg";
 import category2 from "../../assets/category2.jpg";
 import category3 from "../../assets/category3.jpg";
@@ -19,7 +20,7 @@ import category5 from "../../assets/category1.jpg";
 
 const Products = () => {
     return (
-        <div className=''>
+        <div className='scrollbar'>
             <div className="page-title w-full">
 							<h4 className='font-bold text-lg leading-relaxed'>Product List</h4>
 							<h6 className='text-sm font-normal'>Manage your products</h6>
@@ -28,9 +29,10 @@ const Products = () => {
             <div className='mt-4 bg-white rounded p-4'>
 
               <div className='  '>
-			  <div className="flex gap-6   mt-2" style={{transform: "translate(0px, 0px)"}}>
+			  <div className="flex justify-between  mt-2" style={{transform: "translate(0px, 0px)"}}>
 
-			  <div  data-node-key="categories" className=" ant-tabs-tab">
+			 <div className='flex gap-6'> 
+			 <div  data-node-key="categories" className=" ant-tabs-tab">
 			  <div role="tab" aria-selected="false" className="text-indigo-500  cursor-pointer ant-tabs-tab-btn" tabindex="0" id="rc-tabs-0-tab-categories" aria-controls="rc-tabs-0-panel-categories">Items</div>
 			           <div className='border-b-2 translate-y-3 border-indigo-500'></div>
 			  </div>
@@ -50,7 +52,32 @@ const Products = () => {
 			  <div role="tab" aria-selected="false" className="hover:text-indigo-500 transition duration-400 cursor-pointer ant-tabs-tab-btn" tabindex="0" id="rc-tabs-0-tab-categories" aria-controls="rc-tabs-0-panel-categories">Variations</div>
 			           <div className=''></div>
 			  </div>
+			  </div>
 			  {/* <div className="border " style={{left: "0px", width: "39px"}}></div> */}
+
+			  <div className="flex gap-2">
+									<div class="search-path">
+										<a class="btn btn-filter" id="filter_search">
+											<img style={{background:"#FF9F43"}} className='' src={filter} alt="img" />
+											
+
+											{/* <span><img src="assets/img/icons/closes.svg" alt="img" /></span> */}
+										</a>
+									</div>
+									<div className="flex  relative">
+										<a className="absolute mr-4 top-1 left-1 btn btn-searchset">
+										<img src={search} alt="img" />
+										
+										</a>
+									<div id="DataTables_Table_0_filter" className=""><label> 
+									<input type="search" className="pl-6 border rounded outline-none" placeholder="Search..." aria-controls="DataTables_Table_0" />
+									{/* <input type='text' placeholder='Search' className='border-2 outline-none font-sans  bg-slate-100  border-slate-200  rounded-[50px]  w-60       '  />  */}
+									</label></div></div>
+								</div>
+
+
+
+
 			  </div>
 			  <div className='mt-3 border-b'></div>
 			  
@@ -60,10 +87,10 @@ const Products = () => {
               
 			  <table className="table ">
         <tr>
-          <th>
+          <th className='check'>
             <input type="checkbox" />
           </th>
-          <th>Product Name</th>
+          <th> Product Name</th>
           <th>SKU</th>
           <th>Category</th>
           <th>Brand</th>
@@ -253,10 +280,10 @@ const Products = () => {
               <input type="checkbox" />
             </td>
             <td className="flex gap-2">
-												<a href="javascript:void(0);" class="product-img">
+												<a  class="product-img">
 													<img src={category7} alt="product" />
 												</a>
-												<a href="javascript:void(0);">Banana</a>
+												<a >Banana</a>
 											</td>
 											<td>PT0010</td>
 											<td>Health Care	</td>
@@ -369,6 +396,29 @@ const Products = () => {
        
         </tbody>
       </table>
+	  <div className='mt-7 flex justify-between'>
+	  <div className="flex dataTables_length" id="DataTables_Table_0_length">
+	  <h1>Show per page :</h1>
+	  <label className='border outline-none h-6  ml-2'><select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="custom-select custom-select-sm form-control form-control-sm">
+	  <option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label></div>
+      
+    <div className='flex gap-2'>
+	  <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">1 - 10 of 11 items </div>
+	  <div className=" dataTables_paginate paging_numbers" id="DataTables_Table_0_paginate">
+	  <ul className="flex gap-2 pagination">
+	  <li style={{background: "#FF9F43"}} className=" rounded  paginate_button page-item active">
+	  <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">1</a></li>
+
+	  <li  className="bg-slate-500 hover:bg-orange-400 rounded paginate_button page-item ">
+	  <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">2</a>
+	  </li>
+	  </ul>
+	  </div>
+
+	  </div>
+	
+	  </div>
+	  <div className='mt-1 border-orange-400 border-2'></div>
 
               {/* <div class="table-responsive">
 								<div id="DataTables_Table_0_wrapper" className="w-full dataTables_wrapper dt-bootstrap4 no-footer">

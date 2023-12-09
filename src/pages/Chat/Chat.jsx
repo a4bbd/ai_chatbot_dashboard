@@ -312,19 +312,13 @@ const Chat = () => {
                 </div>
               </div>
             </div>
-
+  {/* Chat Conversation */}
             <ul class="list-unstyled">
-              <li class="media sent d-flex">
-                <div class="avatar flex-shrink-0">
-                  <img
-                    src="assets/img/customer/customer5.jpg"
-                    alt="User Image"
-                    class="avatar-img rounded-circle"
-                  />
-                </div>
+              <li className=" media gap-2 mt-2 sent flex justify-end">
+                
                 <div class="media-body flex-grow-1">
                   <div class="msg-box">
-                    <div>
+                    <div className="bg-slate-300 rounded p-1">
                       <p>Hello. What can I do for you?</p>
                       <ul class="chat-msg-info">
                         <li>
@@ -336,17 +330,24 @@ const Chat = () => {
                     </div>
                   </div>
                 </div>
+                <div class="avatar ">
+                  <img
+                    src={profile2}
+                    alt="User Image"
+                    class="avatar-img user_img "
+                  />
+                </div>
               </li>
-              <li class="media received d-flex">
+              <li className="flex gap-2 media received d-flex">
                 <div class="avatar flex-shrink-0">
                   <img
-                    src="assets/img/customer/profile2.jpg"
+                    src={customer3}
                     alt="User Image"
-                    class="avatar-img rounded-circle"
+                    class="avatar-img user_img rounded-circle"
                   />
                 </div>
                 <div class="media-body flex-grow-1">
-                  <div class="msg-box">
+                  <div className=" bg-orange-400 p-1 rounded msg-box">
                     <div>
                       <p>I'm just looking around.</p>
                       <p>Will you tell me something about yourself?</p>
@@ -360,7 +361,7 @@ const Chat = () => {
                     </div>
                   </div>
                   <div class="msg-box">
-                    <div>
+                    <div className="bg-orange-400 mt-1 p-1 rounded ">
                       <p>Are you there? That time!</p>
                       <ul class="chat-msg-info">
                         <li>
@@ -373,30 +374,13 @@ const Chat = () => {
                   </div>
                   <div class="msg-box">
                     <div>
-                      <div class="chat-msg-attachments">
-                        <div class="chat-attachment">
-                          <img
-                            src="assets/img/product/product12.jpg"
-                            alt="Attachment"
-                          />
-                          <a href="" class="chat-attach-download">
-                            <i class="fas fa-download"></i>
-                          </a>
-                        </div>
-                        <div class="chat-attachment">
-                          <img
-                            src="assets/img/product/product13.jpg"
-                            alt="Attachment"
-                          />
-                          <a href="" class="chat-attach-download">
-                            <i class="fas fa-download"></i>
-                          </a>
-                        </div>
+                      <div class="chat-msg-attachments">   
+                       
                       </div>
                       <ul class="chat-msg-info">
                         <li>
                           <div class="chat-time">
-                            <span>8:41 AM</span>
+                           
                           </div>
                         </li>
                       </ul>
@@ -404,27 +388,13 @@ const Chat = () => {
                   </div>
                 </div>
               </li>
-              <li class="media sent d-flex">
-                <div class="avatar flex-shrink-0">
-                  <img
-                    src="assets/img/customer/customer5.jpg"
-                    alt="User Image"
-                    class="avatar-img rounded-circle"
-                  />
-                </div>
-                <div class="media-body flex-grow-1">
-                  <div class="msg-box">
-                    <div>
-                      <p>Where?</p>
-                      <ul class="chat-msg-info">
-                        <li>
-                          <div class="chat-time">
-                            <span>8:42 AM</span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+
+              <li class="">
+
+              <div> 
+                <div className="flex justify-end mt-2 gap-2 media-body flex-grow-1">
+                
+                  <div className="bg-slate-300 rounded p-1 msg-box">
                   <div class="msg-box">
                     <div>
                       <p>
@@ -432,21 +402,27 @@ const Chat = () => {
                         basketballand so on.
                       </p>
                       <ul class="chat-msg-info">
-                        <li>
-                          <div class="chat-time">
-                            <span>8:42 AM</span>
-                          </div>
-                        </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="msg-box">
-                    <div>
+                  </div>
+                  <div class="avatar flex-shrink-0">
+                  <img
+                    src={profile2}
+                    alt="User Image"
+                    class="avatar-img user_img rounded-circle"
+                  />
+                </div>
+                  </div>
+
+                  <div className=" msg-box">
+                    <div className="flex gap-2">
                       <div class="chat-msg-attachments">
                         <div class="chat-attachment">
                           <img
-                            src="assets/img/product/product15.jpg"
+                            src={customer3}
                             alt="Attachment"
+                            className="user_img mt-2"
                           />
                           <a href="" class="chat-attach-download">
                             <i class="fas fa-download"></i>
@@ -454,9 +430,13 @@ const Chat = () => {
                         </div>
                       </div>
                       <ul class="chat-msg-info">
-                        <li>
+                        
+                        <li className="bg-orange-400 p-1 rounded   mt-2"> 
                           <div class="chat-time">
-                            <span>8:50 AM</span>
+                          <p className="">You wait for notice.
+Consectetuorem ipsum dolor sit?
+Ok? </p>
+                          <span>8:55 PM</span>
                           </div>
                         </li>
                       </ul>
@@ -464,17 +444,11 @@ const Chat = () => {
                   </div>
                 </div>
               </li>
-              <li class="media received d-flex">
-                <div class="avatar flex-shrink-0">
-                  <img
-                    src="assets/img/customer/profile2.jpg"
-                    alt="User Image"
-                    class="avatar-img rounded-circle"
-                  />
-                </div>
+              <li className="flex justify-end gap-2 received d-flex">
+                
                 <div class="media-body flex-grow-1">
                   <div class="msg-box">
-                    <div>
+                    <div className="bg-slate-300 rounded p-1">
                       <p>You wait for notice.</p>
                       <p>Consectetuorem ipsum dolor sit?</p>
                       <p>Ok?</p>
@@ -488,19 +462,26 @@ const Chat = () => {
                     </div>
                   </div>
                 </div>
-              </li>
-              <li class="chat-date">Today</li>
-              <li class="media received d-flex">
                 <div class="avatar flex-shrink-0">
                   <img
-                    src="assets/img/customer/profile2.jpg"
+                    src={profile2}
                     alt="User Image"
-                    class="avatar-img rounded-circle"
+                    class="avatar-img user_img rounded-circle"
+                  />
+                </div>
+              </li>
+              
+              <li class="flex gap-2">
+                <div class="avatar flex-shrink-0">
+                  <img
+                    src={customer3}
+                    alt="User Image"
+                    class="avatar-img user_img rounded-circle"
                   />
                 </div>
                 <div class="media-body flex-grow-1">
                   <div class="msg-box">
-                    <div>
+                    <div className="bg-orange-400 p-1 rounded ">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       </p>
@@ -518,17 +499,11 @@ const Chat = () => {
                   </div>
                 </div>
               </li>
-              <li class="media sent d-flex">
-                <div class="avatar flex-shrink-0">
-                  <img
-                    src="assets/img/customer/profile2.jpg"
-                    alt="User Image"
-                    class="avatar-img rounded-circle"
-                  />
-                </div>
+              <li class="flex justify-end gap-2">
+                
                 <div class="media-body flex-grow-1">
                   <div class="msg-box">
-                    <div>
+                    <div className="bg-slate-300 rounded p-1">
                       <p>Lorem ipsum dollar sit</p>
                       <div class="chat-msg-actions dropdown">
                         <a
@@ -539,9 +514,7 @@ const Chat = () => {
                           <i class="fe fe-elipsis-v"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="javascript:void(0);">
-                            Delete
-                          </a>
+                          
                         </div>
                       </div>
                       <ul class="chat-msg-info">
@@ -557,13 +530,20 @@ const Chat = () => {
                     </div>
                   </div>
                 </div>
+                <div class="avatar flex-shrink-0">
+                  <img
+                    src={profile2}
+                    alt="User Image"
+                    class="avatar-img user_img rounded-circle"
+                  />
+                </div>
               </li>
               <li class="media received d-flex">
                 <div class="avatar flex-shrink-0">
                   <img
-                    src="assets/img/customer/profile2.jpg"
+                    src={customer3}
                     alt="User Image"
-                    class="avatar-img rounded-circle"
+                    class="avatar-img user_img rounded-circle"
                   />
                 </div>
                 <div class="media-body flex-grow-1">
