@@ -26,7 +26,7 @@ const Products = () => {
 							<h6 className='text-sm font-normal'>Manage your products</h6>
 			</div>
 
-            <div className='mt-4 bg-white rounded p-4'>
+            <div className='mt-4 border bg-white rounded p-4'>
 
               <div className='  '>
 			  <div className="flex justify-between  mt-2" style={{transform: "translate(0px, 0px)"}}>
@@ -86,7 +86,7 @@ const Products = () => {
 
               
 			  <table className="table ">
-        <tr>
+                <tr>
           <th className='check'>
             <input type="checkbox" />
           </th>

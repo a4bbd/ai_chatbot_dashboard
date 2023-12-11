@@ -4,9 +4,11 @@ import Home from "./pages/Home/Home";
 import Application from "./pages/Application/Application";
 import Menubar from "./components/Menubar/Menubar"
 import Chat from "./pages/Chat/chat";
+import Calender from "./pages/Calender/Calender";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Products from "./pages/Products/Products";
+import Categories from "./pages/Categories/Categories";
 function App() {
   const Layout = ()=>{
 
@@ -44,6 +46,13 @@ function App() {
         {
           path: "/chat",
           element: <Chat />,
+        },{
+          path:"/calendar",
+          element:<Calender />
+        },
+        ,{
+          path:"/categories",
+          element:<Categories />
         },
         {
            path:"/products",
