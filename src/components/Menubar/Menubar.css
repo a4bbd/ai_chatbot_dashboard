@@ -33,6 +33,21 @@
     left: 5px;
     top: 5px;
 }
+.listTypeitem{
+  list-style: disc;
+  color: black;
+}
+.active{
+  /* background: orange; */
+  background-color: #f7eee4;
+  color: #FE9F43;
+  display: block;
+  border-radius: 5px;
+
+}
+.listTypeitem li:hover{
+  color: orange;
+}
 /* .flow{
   background-color: coral;
   width: 100%;

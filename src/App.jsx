@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Products from "./pages/Products/Products";
 import Categories from "./pages/Categories/Categories";
+import Categoriesform from "./pages/Categoriesform/Categoriesform";
 function App() {
   const Layout = ()=>{
 
@@ -57,6 +58,9 @@ function App() {
         {
            path:"/products",
            element: <Products   />
+        },{
+          path:"/categoriesform",
+          element:<Categoriesform />
         }
 
       ]

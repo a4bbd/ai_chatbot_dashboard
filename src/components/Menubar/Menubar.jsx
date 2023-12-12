@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 import "./Menubar.css";
-import { Link } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
 
 
 const Menubar = ({click}) => {
 	const [toggle,setToggle] = useState(false);
+
+    // const navLinkStyle = ({isActive}) =>{
+	// 	return{
+	// 		background:  isActive ? 'orange' : 'normal',
+	// 	}
+	// }
   return (
     <div>
     {/* <div className="grid grid-cols-12  grid-rows-6  h-full "> */}
+
 	<div className="h-full flex">
       {/* <h1 className=  "  bg-red-700    flow      row-start-1 row-end-[-1] border p-5 border-slate-200 col-start-1 col-end-3"> */}
 
 	  {/* <h1   className="menu w-[331px]  mt-[-1px]  bg-white flow  border p-5 border-slate-200 "> */}
 	  {/* style={click ? {display:"none"}:{}} */}
+
+
 	  <h1 style={click ? {width: "108px" , transition : ".2s"}:{width: "300px"}}  className="menu  mt-[-1px]  bg-white flow  border p-5 border-slate-200 ">
 
       <div   className="">
@@ -20,19 +30,21 @@ const Menubar = ({click}) => {
 							<li className="">
 								<h6 style={click ? {display:"none"}:{}}  className="submenu-hdr">Main</h6>
 								<ul className="p-3">
-									{click? <Link to={"/"}> <li> <a className="hover:text-orange-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> </a> </li> </Link>: <Link to={"/"}> <li class="active">
-										<a   className="hover:text-orange-300 pt-2 pb-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg><span>Dashboard</span></a>
-									</li> </Link> }
+									{click? <Link to={"/"}> <li> <a className="hover:text-orange-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> </a> </li> </Link>: <NavLink   to="/"> <li >
+									{/* write to code */}
+									{/* onClick={()=> setClick(!click) */}
+										<a  className="hover:text-orange-300 pt-2 pb-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg><span>Dashboard</span></a>
+									</li> </NavLink> }
 									<li class="submenu">
 									{click ?<a  className="p-2 hover:text-orange-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></a>  : 	<a className="flex hover:text-orange-300  relative items-center pt-2 gap-3" > <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> <span >Application</span>
 									
 									<span className="menu-arrow" onClick={()=>setToggle(!toggle)}></span></a> }
 										{
 											toggle && (
-											<ul className="  transition duration-700 ease-in-out pt-3 pb-3 ml-4">
-											<Link to={"/chat"}><li><a className="cursor-default transition text-orange-300 duration-400 pt-3 pb-3 hover:text-orange-300" >Chat</a></li></Link>
-											<Link to={"/calendar"} ><li><a className="cursor-default transition duration-400 pt-3 pb-3 hover:text-orange-300" >Calendar</a></li></Link>
-											<li><a className="cursor-default transition  duration-400 pt-3 pb-3 hover:text-orange-300">Email</a></li>
+											<ul  className="listTypeitem transition duration-700 ease-in-out pt-3 pb-3 ml-7">
+											<Link to={"/chat"}><li><a className="cursor-default block transition    duration-400 pt-1  " >Chat</a></li></Link>
+											<Link to={"/calendar"} ><li><a className="cursor-default  transition duration-400 block pt-2 pb-2 " >Calendar</a></li></Link>
+											<li><a className="cursor-default transition  duration-400  pt-2 pb-3 ">Email</a></li>
 										    </ul>
 											)
 										}
@@ -62,13 +74,15 @@ const Menubar = ({click}) => {
 								<h6 style={click ? {display:"none"}:{}} class="submenu-hdr">Product</h6>
 								<ul className="p-3 ">
 									<li>
-									 {click ? <Link to={"/categories"}> <a className="hover:text-orange-300 transition duration-400 "> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></a> </Link> : <Link to={"/categories"}> <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span>Categories</span></a> </Link>}</li>
+									 {click ? <NavLink to="/categories"> <a className="hover:text-orange-300 transition duration-400 "> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></a> </NavLink> : <NavLink to="/categories"> <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span>Categories</span></a> </NavLink>}</li>
 									<li>
 									{click ? <a className="p-2 transition duration-400  hover:text-orange-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> </a> : <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><span>Attrbutes</span></a> }</li>
 
 
 									<li>
-									{click ? <Link to={"/products"}> <a className="hover:text-orange-300 transition duration-400 "> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> </a> </Link> : <Link to={"/products"}> <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Products</span></a> </Link> }</li>	
+									{click ? <Link to={"/products"}> <a className="hover:text-orange-300 transition duration-400 "> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> </a> </Link> : <NavLink to="/products" > <a 
+									
+									className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Products</span></a> </NavLink> }</li>	
 									<li>
 									{click ? <a className="hover:text-orange-300 transition duration-400  p-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg> </a> : <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>Coupons</span></a>}</li>								
 									<li>{click ? <a  className="hover:text-orange-300 transition duration-400 "> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg> </a> : <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg><span>Visit Store</span></a>}</li>

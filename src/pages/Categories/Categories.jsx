@@ -19,6 +19,7 @@ import category8 from "../../assets/category8.jpg";
 import category9 from "../../assets/category9.jpg";
 import category11 from "../../assets/category11.jpg";
 import category5 from "../../assets/category1.jpg";
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
     return (
@@ -29,9 +30,12 @@ const Categories = () => {
 							<h6 style={{color:"#555"}} className='font-normal text-sm'>View/Search product Category</h6>
 						</div>
 						<div  className="">
-							<button style={{background:"#FF9F43"}} className='text-center block pt-2 pb-2 pl-4 pr-4 text-white rounded' href="addcategory.html" class="btn btn-added">
-                            <FontAwesomeIcon icon={faPlus} className='mr-2' />Add  Category
-							</button>
+							{/* <button style={{background:"#FF9F43"}} className='block text-center pt-2 pb-2 pl-4 pr-4 text-white rounded' href="addcategory.html" class="btn btn-added">
+                            <FontAwesomeIcon  icon={faPlus} className='' /> Add  Category
+							</button> */}
+						   <Link to={"/categoriesform"}><button  className="hover:bg-slate-700 bg-orange-400 text-white font-bold py-2 px-4 rounded">
+							<FontAwesomeIcon  icon={faPlus} className='w-7' />
+							Add Category</button></Link>
 						</div>
 			</div>
 
