@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./products.css";
 import search from "../../assets/search-white.svg";
 import filter from "../../assets/filter.svg";
@@ -15,10 +15,13 @@ import category8 from "../../assets/category8.jpg";
 import category9 from "../../assets/category9.jpg";
 import category11 from "../../assets/category11.jpg";
 import category5 from "../../assets/category1.jpg";
+import {  } from 'react-router-dom';
+import AddProductform from '../AddProductForm/AddProductform';
 
 
 
 const Products = () => {
+	const [addproduct,setAddproduct] = useState(false);
     return (
         <div className='scrollbar'>
             <div className="page-title w-full">
@@ -38,7 +41,8 @@ const Products = () => {
 			  </div>
 
 			  <div  data-node-key="categories" className=" ant-tabs-tab">
-			  <div role="tab" aria-selected="false" className="hover:text-indigo-500 transition duration-400 cursor-pointer  ant-tabs-tab-btn" tabindex="0" id="rc-tabs-0-tab-categories" aria-controls="rc-tabs-0-panel-categories">Categories</div>
+
+			  <div onClick={()=>setAddproduct(!addproduct)} role="tab" aria-selected="false" className="hover:text-indigo-500 transition duration-400 cursor-pointer  ant-tabs-tab-btn" tabindex="0" id="rc-tabs-0-tab-categories" aria-controls="rc-tabs-0-panel-categories">Add Products</div>
 			           <div className=''></div>
 			  </div>
 
@@ -71,21 +75,37 @@ const Products = () => {
 										</a>
 									<div id="DataTables_Table_0_filter" className=""><label> 
 									<input type="search" className="pl-6 border rounded outline-none" placeholder="Search..." aria-controls="DataTables_Table_0" />
-									{/* <input type='text' placeholder='Search' className='border-2 outline-none font-sans  bg-slate-100  border-slate-200  rounded-[50px]  w-60       '  />  */}
 									</label></div></div>
 								</div>
-
-
-
-
 			  </div>
 			  <div className='mt-3 border-b'></div>
+
+			    {/* <div className='pl-4 bg-slate-400 pr-4 mt-3 pt-2 pb-2'>
+                       <div className='flex justify-between'>
+					   <div className='flex gap-4' >
+					   <div  flexflow="column" margin="0 1rem 0 0" class="sc-bqOBKd vOcus">
+					   <div class="ant-typography sc-jIQHsi jVySKJ css-w3w8ue" level="3" font-weight="600">Items</div>
+					   <div class=""></div><div class="ant-typography sc-bjEwCx gHuhcq css-w3w8ue">Your item cards</div></div>
+
+					   <a href="#" className=" text-lg bg-blue-600 hover:bg-orange-600 text-white rounded pt-3 pb-3 w-28 inline-block text-center me-2">Create Item</a>
+
+					   <button type="button" className="a"><span>Import items</span></button></div> 
+
+					  
+
+
+					   <span class=""><input placeholder="Search item" className="border ant-input ant-input-lg css-w3w8ue" type="text" value="" /><span class="ant-input-group-addon"><button type="button" class="ant-btn css-w3w8ue ant-btn-primary ant-btn-lg ant-input-search-button"><span class="ant-btn-icon"><span role="img" aria-label="search" class="anticon anticon-search"><svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></span></span></button></span></span>
+					   </div>
+					   
+				</div> */}
 			  
 			  </div>
 
+			  {addproduct ? <AddProductform /> :
+
 
               
-			  <table className="table ">
+			  <> <table className="table ">
                 <tr>
           <th className='check'>
             <input type="checkbox" />
@@ -391,9 +411,6 @@ const Products = () => {
 												</a>
 											</td>
            </tr>
-          
-        
-       
         </tbody>
       </table>
 	  <div className='mt-7 flex justify-between'>
@@ -418,7 +435,7 @@ const Products = () => {
 	  </div>
 	
 	  </div>
-	  <div className='mt-1 border-orange-400 border-2'></div>
+	  <div className='mt-1 border-orange-400 border-2'></div></>}
 
               {/* <div class="table-responsive">
 								<div id="DataTables_Table_0_wrapper" className="w-full dataTables_wrapper dt-bootstrap4 no-footer">
