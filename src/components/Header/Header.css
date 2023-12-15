@@ -136,6 +136,13 @@
   height: 15px;
 }
 
+/* .sm__logo:first-child{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+} */
+
   /* .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   } */

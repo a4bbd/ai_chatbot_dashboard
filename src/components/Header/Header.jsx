@@ -17,10 +17,10 @@ const Header = ({getValue}) => {
     getValue(click);
     return (
         <>
-        <div className='  header w-full flex'>
-                {/* width:"40px" */}
-              <div style={click ? {width:"50px"}: {}}  className='header-left ml-[58px;] px-5 py-0 relative w-[253px] h-[60px]'>
-                    <a>{ click ? <img className='flex justify-content w-10 content-center'  src={logosmall} /> : <img className='w-[140px] ' src={logo} /> } </a>
+        <div className='header w-full flex'>
+              <div style={click ? {width:"50px"}: {}}  className='header-left ml-[58px]  py-0 relative w-[253px] h-[60px]'>
+              {/* flex justify-content w-10 content-center */}
+                    <a className='sm__logo '>{ click ? <img  className='logosmall ml-[-2rem] mt-1'  src={logosmall} /> : <img className='w-[140px] ' src={logo} /> } </a>
                      
                     {/* <a className=' absolute top-4 right-[-10px]'>
                     <div className='text-white  w-5 h-5 bg-amber-600 rounded-full'>
