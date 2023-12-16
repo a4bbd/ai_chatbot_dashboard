@@ -10,6 +10,7 @@ import { useState } from "react";
 import Products from "./pages/Products/Products";
 import Categories from "./pages/Categories/Categories";
 import Categoriesform from "./pages/Categoriesform/Categoriesform";
+import Profile from "./components/My_Profile/Profile";
 function App() {
   const Layout = ()=>{
 
@@ -61,7 +62,10 @@ function App() {
         },{
           path:"/categoriesform",
           element:<Categoriesform />
-        }
+        },{
+          path:"/myprofile",
+          element:<Profile />
+        },
 
       ]
     },

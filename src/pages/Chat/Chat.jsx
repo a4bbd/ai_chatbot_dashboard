@@ -42,7 +42,7 @@ const Chat = () => {
           </div>
 
           <div className="card-body chat__scrollbar contacts_body chat-users-list chat-scroll">
-            <a className="media border-b transition duration-300 p-3 bg-slate-100 w-full flex gap-5 active">
+            <a className="media border-b transition duration-300 p-3 bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -68,7 +68,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -92,7 +92,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -116,7 +116,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -140,7 +140,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -164,7 +164,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -188,7 +188,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -212,7 +212,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -238,7 +238,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img
@@ -262,7 +262,7 @@ const Chat = () => {
                 </div>
               </div>
             </a>
-            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 active">
+            <a className="media transition duration-200 p-3 border-b hover:bg-slate-100 w-full flex gap-5 ">
               <div class="media-img-wrap flex-shrink-0">
                 <div className="avatar avatar-away relative">
                   <img

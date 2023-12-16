@@ -7,25 +7,21 @@ import { Button } from "@material-tailwind/react";
 const Menubar = ({click}) => {
 	const [toggle,setToggle] = useState(false);
 
-    // const navLinkStyle = ({isActive}) =>{
-	// 	return{
-	// 		background:  isActive ? 'orange' : 'normal',
-	// 	}
-	// }
+    
   return (
     <div>
     {/* <div className="grid grid-cols-12  grid-rows-6  h-full "> */}
 
-	<div className="h-full flex">
+	<div className="sidebar  h-full flex">
       {/* <h1 className=  "  bg-red-700    flow      row-start-1 row-end-[-1] border p-5 border-slate-200 col-start-1 col-end-3"> */}
 
 	  {/* <h1   className="menu w-[331px]  mt-[-1px]  bg-white flow  border p-5 border-slate-200 "> */}
 	  {/* style={click ? {display:"none"}:{}} */}
 
 
-	  <h1 style={click ? {width: "108px" , transition : ".2s"}:{width: "300px"}}  className="menu  mt-[-1px]  bg-white flow  border p-5 border-slate-200 ">
+	  <h1 style={click ? {width: "105px" , transition : ".2s"}:{width: "268px"}}  className="menu scrollbox mt-[-1px]  bg-white flow  border p-5 border-slate-200 ">
 
-      <div   className="">
+      <div   className="scrollbox-inner">
 						<ul  className="">
 							<li className="">
 								<h6 style={click ? {display:"none"}:{}}  className="submenu-hdr">Main</h6>
@@ -36,12 +32,12 @@ const Menubar = ({click}) => {
 										<a  className="hover:text-orange-300 pt-2 pb-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg><span>Dashboard</span></a>
 									</li> </NavLink> }
 									<li class="submenu">
-									{click ?<a  className="p-2 hover:text-orange-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></a>  : 	<a className="flex hover:text-orange-300  relative items-center pt-2 gap-3" > <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> <span >Application</span>
+									{click ?<a  className="p-2 hover:text-orange-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></a>  : 	<a onClick={()=>setToggle(!toggle)}  className="flex cursor-pointer hover:text-orange-300  relative items-center pt-2 gap-3" > <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> <span >Application</span>
 									
-									<span className="menu-arrow" onClick={()=>setToggle(!toggle)}></span></a> }
+									<span className="menu-arrow" style={{transform : toggle ? "rotate(90deg)":"none" }} onClick={()=>setToggle(!toggle)}></span></a> }
 										{
 											toggle && (
-											<ul  className="listTypeitem transition duration-700 ease-in-out pt-3 pb-3 ml-7">
+											<ul  className="listTypeitem   pt-3 pb-3 ml-7">
 											<Link to={"/chat"}><li><a className="cursor-default block transition    duration-400 pt-1  " >Chat</a></li></Link>
 											<Link to={"/calendar"} ><li><a className="cursor-default  transition duration-400 block pt-2 pb-2 " >Calendar</a></li></Link>
 											<li><a className="cursor-default transition  duration-400  pt-2 pb-3 ">Email</a></li>

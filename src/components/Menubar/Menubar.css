@@ -62,11 +62,12 @@
 .flow{
   height: 94vh;
   overflow-y: scroll;
-  
+  width: 267px;
 }
 
 .flow::-webkit-scrollbar {
-  width: 10px; 
+  width: 7px; 
+  transition-duration: 5s;
   
 }
 
@@ -76,15 +77,34 @@
 }
 
 .flow::-webkit-scrollbar-thumb {
-  background: rgb(221, 221, 221);
+  background: #EBEBEB;
   opacity: 0.1;
   border-radius: 100vh;
+  
 }
 
-/* Handle on hover */
-/* .flow::-webkit-scrollbar-thumb:hover {
-  background: #555;
+
+
+
+
+/* .sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 267px;
+  height: 120%;
+  
+}
+.scrollbox{
+  overflow: auto;
+}
+.sidebar ::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color:green;
 } */
+
 
 
 

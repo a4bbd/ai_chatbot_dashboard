@@ -42,7 +42,7 @@ const Products = () => {
 
 			  <div  data-node-key="categories" className=" ant-tabs-tab">
 
-			  <div onClick={()=>setAddproduct(!addproduct)} role="tab" aria-selected="false" className="hover:text-indigo-500 transition duration-400 cursor-pointer  ant-tabs-tab-btn" tabindex="0" id="rc-tabs-0-tab-categories" aria-controls="rc-tabs-0-panel-categories">Add Products</div>
+			  <div  role="tab" aria-selected="false" className="hover:text-indigo-500 transition duration-400 cursor-pointer  ant-tabs-tab-btn" tabindex="0" id="rc-tabs-0-tab-categories" aria-controls="rc-tabs-0-panel-categories">Add Products</div>
 			           <div className=''></div>
 			  </div>
 
@@ -59,13 +59,12 @@ const Products = () => {
 			  </div>
 			  {/* <div className="border " style={{left: "0px", width: "39px"}}></div> */}
 
-			  <div className="flex gap-2">
+			  {/* <div className="flex gap-2">
 									<div class="search-path">
 										<a class="btn btn-filter" id="filter_search">
 											<img style={{background:"#FF9F43"}} className='' src={filter} alt="img" />
 											
 
-											{/* <span><img src="assets/img/icons/closes.svg" alt="img" /></span> */}
 										</a>
 									</div>
 									<div className="flex  relative">
@@ -76,28 +75,33 @@ const Products = () => {
 									<div id="DataTables_Table_0_filter" className=""><label> 
 									<input type="search" className="pl-6 border rounded outline-none" placeholder="Search..." aria-controls="DataTables_Table_0" />
 									</label></div></div>
-								</div>
+								</div> */}
 			  </div>
-			  <div className='mt-3 border-b'></div>
+			  <div className='mt-3 border-b border-slate-50'></div>
 
-			    {/* <div className='pl-4 bg-slate-400 pr-4 mt-3 pt-2 pb-2'>
+			    <div className='pl-5   bg-slate-50 border rounded mt-3 pr-5  pt-5 pb-5'>
                        <div className='flex justify-between'>
 					   <div className='flex gap-4' >
-					   <div  flexflow="column" margin="0 1rem 0 0" class="sc-bqOBKd vOcus">
-					   <div class="ant-typography sc-jIQHsi jVySKJ css-w3w8ue" level="3" font-weight="600">Items</div>
-					   <div class=""></div><div class="ant-typography sc-bjEwCx gHuhcq css-w3w8ue">Your item cards</div></div>
+					   <div  flexflow="column" margin="0 1rem 0 0" class="">
+					   <div className="text-xl font-semibold leading-6" level="3" font-weight="600">Items</div>
+					   <div className="text-xs leading-4 tracking-wider ">Your item cards</div></div>
 
-					   <a href="#" className=" text-lg bg-blue-600 hover:bg-orange-600 text-white rounded pt-3 pb-3 w-28 inline-block text-center me-2">Create Item</a>
-
-					   <button type="button" className="a"><span>Import items</span></button></div> 
+					   {/* <a href="#" className=" text-lg bg-blue-600 hover:bg-orange-600 text-white rounded pt-3 pb-3 w-28 inline-block text-center me-2">Create Item</a> */}
+                          <button onClick={()=>setAddproduct(!addproduct)} className='ml-3 pl-2 pr-2 text-lg rounded transition duration-700 ease-in-out bg-orange-500 hover:bg-slate-400 text-white'>Create Item</button>
+						  
+					   <button type="button" className="pl-2 pr-2 text-lg rounded bg-orange-500 hover:bg-slate-400 text-white transition duration-700 ease-in-out"><span>Import items</span></button></div> 
 
 					  
 
 
-					   <span class=""><input placeholder="Search item" className="border ant-input ant-input-lg css-w3w8ue" type="text" value="" /><span class="ant-input-group-addon"><button type="button" class="ant-btn css-w3w8ue ant-btn-primary ant-btn-lg ant-input-search-button"><span class="ant-btn-icon"><span role="img" aria-label="search" class="anticon anticon-search"><svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></span></span></button></span></span>
+                       <div className='relative'>
+					   <input className='mt-2  focus:border-orange-400 pt-1 pb-1  pl-3 pr-8 outline-none rounded  w-72 border' placeholder='Search' type='text'/>
+					   <img className='absolute top-4 w-5 right-2' src={search} alt="img" />
+
+					   </div>
 					   </div>
 					   
-				</div> */}
+				</div>
 			  
 			  </div>
 
@@ -105,9 +109,9 @@ const Products = () => {
 
 
               
-			  <> <table className="table ">
-                <tr>
-          <th className='check'>
+			  <> <table className="table mt-1">
+                <tr className='h-12'>
+          <th className='check  '>
             <input type="checkbox" />
           </th>
           <th> Product Name</th>

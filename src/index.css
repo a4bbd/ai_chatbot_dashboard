@@ -50,7 +50,9 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
 } */
-
+*{
+  box-sizing: border-box;
+}
 .maincontainer{
   display: flex;
 }
@@ -81,7 +83,10 @@ body{
   object-fit: cover;
 }
 
-
+/* hide the main scroll bar  */
+body {
+  overflow: hidden; 
+}
 
 
 
