@@ -82,6 +82,30 @@ body{
   border-radius: 50%;
   object-fit: cover;
 }
+.scroll__bar{
+  height: 95vh;
+  overflow-y: scroll;
+  width: 267px;
+  
+
+}
+.scroll__bar::-webkit-scrollbar {
+  width: 7px; 
+  transition-duration: 5s;
+  
+}
+
+.scroll__bar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  
+}
+
+.scroll__bar::-webkit-scrollbar-thumb {
+  background: #EBEBEB;
+  opacity: 0.1;
+  border-radius: 100vh;
+  
+}
 
 /* hide the main scroll bar  */
 body {

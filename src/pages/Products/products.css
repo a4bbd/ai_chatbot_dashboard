@@ -34,7 +34,7 @@
 
  
 
-  .scrollbar{
+  /* .scrollbar{
    height: 89vh;
    overflow-y: scroll;
    
@@ -54,7 +54,7 @@
    background: rgb(221, 221, 221);
    opacity: 0.1;
    border-radius: 100vh;
- }
+ } */
 
   .paginate_button{
    padding-top: 0.375rem;

@@ -15,13 +15,14 @@ import category8 from "../../assets/category8.jpg";
 import category9 from "../../assets/category9.jpg";
 import category11 from "../../assets/category11.jpg";
 import category5 from "../../assets/category1.jpg";
-import {  } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import AddProductform from '../AddProductForm/AddProductform';
 
 
 
 const Products = () => {
 	const [addproduct,setAddproduct] = useState(false);
+	const [importItem,setImportitem] = useState(false);
     return (
         <div className='scrollbar'>
             <div className="page-title w-full">
@@ -89,7 +90,7 @@ const Products = () => {
 					   {/* <a href="#" className=" text-lg bg-blue-600 hover:bg-orange-600 text-white rounded pt-3 pb-3 w-28 inline-block text-center me-2">Create Item</a> */}
                           <button onClick={()=>setAddproduct(!addproduct)} className='ml-3 pl-2 pr-2 text-lg rounded transition duration-700 ease-in-out bg-orange-500 hover:bg-slate-400 text-white'>Create Item</button>
 						  
-					   <button type="button" className="pl-2 pr-2 text-lg rounded bg-orange-500 hover:bg-slate-400 text-white transition duration-700 ease-in-out"><span>Import items</span></button></div> 
+					  <NavLink to={"/importitems"}> <button onClick={()=>setImportitem(!importItem)} type="button" className="pl-2 pr-2 text-lg rounded bg-orange-500 hover:bg-slate-400 text-white transition duration-700 ease-in-out"><span>Import items</span></button> </NavLink></div> 
 
 					  
 

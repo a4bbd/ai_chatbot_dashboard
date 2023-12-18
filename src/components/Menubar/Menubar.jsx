@@ -19,7 +19,7 @@ const Menubar = ({click}) => {
 	  {/* style={click ? {display:"none"}:{}} */}
 
 
-	  <h1 style={click ? {width: "105px" , transition : ".2s"}:{width: "268px"}}  className="menu scrollbox mt-[-1px]  bg-white flow  border p-5 border-slate-200 ">
+	  <h1 style={click ? {width: "105px" , transition : ".2s"}:{width: "272px"}}  className="menu scrollbox mt-[-1px]  bg-white flow  border p-5 border-slate-200 ">
 
       <div   className="scrollbox-inner">
 						<ul  className="">

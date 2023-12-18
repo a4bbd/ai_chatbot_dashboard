@@ -11,6 +11,7 @@ import Products from "./pages/Products/Products";
 import Categories from "./pages/Categories/Categories";
 import Categoriesform from "./pages/Categoriesform/Categoriesform";
 import Profile from "./components/My_Profile/Profile";
+import Importitems from "./pages/importItems/Importitems";
 function App() {
   const Layout = ()=>{
 
@@ -28,7 +29,7 @@ function App() {
              <Menubar click={click}  />
           </div>
           {/* style={click ? {width: "110px"}:{width: "300px"}} */}
-         <div style={click ? {width : "214%",transition : ".5s"}:{width: "84%",transition : ".5s"}} className="contentContainer bg-slate-50">
+         <div style={click ? {width : "214%",transition : ".5s"}:{width: "96%",transition : ".5s"}} className="contentContainer scroll__bar bg-slate-50">
              <Outlet />
          </div>
         </div>
@@ -65,7 +66,10 @@ function App() {
         },{
           path:"/myprofile",
           element:<Profile />
-        },
+        },{
+          path:"/importitems",
+          element:<Importitems />
+        }
 
       ]
     },
