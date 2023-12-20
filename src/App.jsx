@@ -12,6 +12,8 @@ import Categories from "./pages/Categories/Categories";
 import Categoriesform from "./pages/Categoriesform/Categoriesform";
 import Profile from "./components/My_Profile/Profile";
 import Importitems from "./pages/importItems/Importitems";
+import Coupons from "./pages/Coupons/Coupons";
+import CouponForm from "./pages/CouponForm/CouponForm";
 function App() {
   const Layout = ()=>{
 
@@ -69,6 +71,12 @@ function App() {
         },{
           path:"/importitems",
           element:<Importitems />
+        },{
+          path:"/coupons",
+          element:<Coupons />
+        },{
+          path : "/couponform",
+          element : <CouponForm />
         }
 
       ]

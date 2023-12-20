@@ -1,6 +1,24 @@
 import React from "react";
 import upload from "../../assets/upload.svg";
+import { useFormik } from "formik";
+
+const initialValues ={
+  category_name: "",
+  category_code: "",
+  description:"",
+  product_images:"",
+
+}
+
 const Categoriesform = () => {
+  const {values,errors,handleBlur,handleChange,handleSubmit} = useFormik({
+    initialValues : initialValues,
+    onSubmit : (values)=>{
+        console.log(values)
+    }
+  });
+  
+
   return (
     <div>
       <div class="page-header">
@@ -11,7 +29,7 @@ const Categoriesform = () => {
           </h6>
         </div>
       </div>
-
+      <form onSubmit={handleSubmit}>
       <div className="bg-white rounded mt-4 border">
         <div className="p-6 w-full">
           <div className="flex gap-6 w-full">
@@ -21,6 +39,10 @@ const Categoriesform = () => {
                 className=" mt-2 appearance-none focus:border-orange-500 h-11   border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
                 type="text"
                 placeholder="Category Name"
+                name="category_name"
+                value={values.category_name}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
             </div>
 
@@ -30,6 +52,10 @@ const Categoriesform = () => {
                 class="  mt-2 appearance-none focus:border-orange-500 h-11   border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
                 type="text"
                 placeholder="Category Code"
+                name="category_code"
+                value={values.category_code}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
             </div>
           </div>
@@ -37,7 +63,9 @@ const Categoriesform = () => {
           <div class="w-full mt-5">
             <div className="form-group w-full">
               <label>Description</label>
-              <textarea className="block mt-2 h-24 focus:border-orange-500 rounded p-3  w-full border outline-none  form-control"></textarea>
+              <textarea name="description" value={values.description}
+                onChange={handleChange}
+                onBlur={handleBlur} className="block mt-2 h-24 focus:border-orange-500 rounded p-3  w-full border outline-none  form-control"></textarea>
             </div>
           </div>
           <div className="w-full mt-5">
@@ -60,18 +88,21 @@ const Categoriesform = () => {
                 </div>
 
               </label>
-              <input id="files" className="" style={{ visibility: "hidden" }} type="file" />
+              <input name="product_images" value={values.product_images}
+                onChange={handleChange}
+                onBlur={handleBlur} id="files" className="" style={{ visibility: "hidden" }} type="file" />
             </div>
 
           </div>
          
           <div className="mt-10">
-									<a href="#" className="bg-orange-500 hover:bg-orange-600 text-white rounded pt-3 pb-3 w-28 inline-block text-center me-2">Submit</a>
+									<button href="#" type="submit" className="bg-orange-500 hover:bg-orange-600 text-white rounded pt-3 pb-3 w-28 inline-block text-center me-2">Submit</button>
 									<a href="#" className="text-white hover:bg-slate-800  bg-slate-700 pt-3 pb-3 rounded w-28 inline-block text-center">Cancel</a>
 		 </div>
           
         </div>
       </div>
+      </form>
     </div>
   );
 };
