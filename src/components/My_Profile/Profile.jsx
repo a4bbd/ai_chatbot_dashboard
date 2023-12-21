@@ -1,8 +1,26 @@
 import React from "react";
 import customer5 from "../../assets/customer5.jpg";
 import edit from "../../assets/edit-set.svg";
+import { useFormik } from "formik";
 import "./Profile.css";
+const initialValues ={
+  firstName:"",
+  lastName:"",
+  email:"",
+  phone:"",
+  password:"",
+  confirmpassword:"",
+}
+
 const Profile = () => {
+  const {values,errors,handleBlur,handleChange,handleSubmit} = useFormik({
+    initialValues : initialValues,
+    onSubmit : (values)=>{
+        console.log(values)
+    }
+  });
+  
+
   return (
     <div>
       <div className="page-header">
@@ -71,6 +89,7 @@ const Profile = () => {
           </div>
         </div>
 
+          <form onSubmit={handleSubmit}>
           <div className="mt-2">
           <div className="flex gap-6 w-full">
             <div className="w-full">
@@ -78,6 +97,10 @@ const Profile = () => {
               <input
                 className=" mt-2 appearance-none focus:border-orange-500 h-11 border-slate-300  border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
                 type="text"
+                name="firstName"
+                value={values.firstName}
+                onChange={handleChange}
+                onBlur={handleBlur}
                 placeholder="First Name"
               />
             </div>
@@ -87,6 +110,10 @@ const Profile = () => {
               <input
                 class="  mt-2 appearance-none focus:border-orange-500 h-11 border-slate-300  border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
                 type="text"
+                name="lastName"
+                value={values.lastName}
+                onChange={handleChange}
+                onBlur={handleBlur}
                 placeholder="Last Name"
               />
             </div>
@@ -98,6 +125,10 @@ const Profile = () => {
               <input
                 className=" mt-2 appearance-none focus:border-orange-500 h-11  border-slate-300  border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
                 type="email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
                 placeholder="username@gmail.com"
               />
             </div>
@@ -107,6 +138,10 @@ const Profile = () => {
               <input
                 class="  mt-2 appearance-none focus:border-orange-500 h-11 border-slate-300  border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
                 type="text"
+                name="phone"
+                value={values.phone}
+                onChange={handleChange}
+                onBlur={handleBlur}
                 placeholder="+8801710977178"
               />
             </div>
@@ -114,38 +149,49 @@ const Profile = () => {
 
           <div className="flex mt-7 gap-6 w-full">
             <div className="w-full">
-              <label>User Name</label>
+              <label>Password</label>
               <input
                 className=" mt-2 appearance-none focus:border-orange-500 h-11 border-slate-300  border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
-                type="text"
+                type="password"
+                name="password"
+                value={values.password}
+                onChange={handleChange}
+                onBlur={handleBlur}
                 placeholder="User Name"
               />
             </div>
 
             <div className="w-full">
-              <label>Password</label>
+              <label>Confirm Password</label>
               <input
-                class="  mt-2 appearance-none focus:border-orange-500 h-11 border-slate-300   border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
+                class="mt-2 appearance-none focus:border-orange-500 h-11 border-slate-300   border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none "
                 type="password"
+                name="confirmpassword"
+                value={values.confirmpassword}
+                onChange={handleChange}
+                onBlur={handleBlur}
                 placeholder="Password"
               />
             </div>
           </div>
 
           <div className="mt-4">
-            <a
+            <button
               href="#"
+              type="submit"
               className="bg-orange-500 hover:bg-orange-600 text-white rounded pt-3 pb-3 w-28 inline-block text-center me-2">
-              Save
-            </a>
-            <a
+              Submit
+            </button>
+            <button
               href="#"
+              type="submit"
               className="text-white hover:bg-slate-800  bg-slate-700 pt-3 pb-3 rounded w-28 inline-block text-center">
               Cancel
-            </a>
+            </button>
           </div>
 
           </div>
+          </form>
 
       </div>
       
