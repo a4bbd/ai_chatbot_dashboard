@@ -2,6 +2,7 @@ import React from "react";
 import customer5 from "../../assets/customer5.jpg";
 import edit from "../../assets/edit-set.svg";
 import { useFormik } from "formik";
+import {singUpSchema} from "../schemas";
 import "./Profile.css";
 const initialValues ={
   firstName:"",
@@ -15,10 +16,12 @@ const initialValues ={
 const Profile = () => {
   const {values,errors,handleBlur,handleChange,handleSubmit} = useFormik({
     initialValues : initialValues,
+    validationSchema : singUpSchema,
     onSubmit : (values)=>{
         console.log(values)
     }
   });
+  
   
 
   return (
@@ -103,6 +106,8 @@ const Profile = () => {
                 onBlur={handleBlur}
                 placeholder="First Name"
               />
+              {<p>{errors.name}</p>}
+              
             </div>
 
             <div className="w-full">
