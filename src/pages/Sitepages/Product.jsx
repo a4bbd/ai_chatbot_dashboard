@@ -5,7 +5,7 @@ import {
     faPaperPlane,
     faComment
   } from "@fortawesome/free-solid-svg-icons";
-import product_1 from '../assets/product_1.jpg'
+import product_1 from "../../assets/product_1.jpg"
 const Product = () => {
     return (
         <div className='h-[2000px] w-full bg-slate-50 mb-5'>

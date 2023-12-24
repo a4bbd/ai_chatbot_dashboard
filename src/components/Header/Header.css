@@ -114,14 +114,14 @@
 #toggle_btn {
   position: absolute;
     opacity: 1;
-    background: #FF9F43;
-    right: -13px;
+    background: #f7aa62;
+    right: -15px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     color: #fff;
     top: 18px;
 }

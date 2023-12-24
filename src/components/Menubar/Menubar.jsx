@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Menubar.css";
 import { NavLink,Link } from "react-router-dom";
-import { Button } from "@material-tailwind/react";
 
 
 const Menubar = ({click}) => {
@@ -9,17 +8,12 @@ const Menubar = ({click}) => {
 
     
   return (
-    <div>
-    {/* <div className="grid grid-cols-12  grid-rows-6  h-full "> */}
+    <div className="">
 
-	<div className="sidebar  h-full flex">
-      {/* <h1 className=  "  bg-red-700    flow      row-start-1 row-end-[-1] border p-5 border-slate-200 col-start-1 col-end-3"> */}
+	<div className="sidebar h-full flex">
+    
 
-	  {/* <h1   className="menu w-[331px]  mt-[-1px]  bg-white flow  border p-5 border-slate-200 "> */}
-	  {/* style={click ? {display:"none"}:{}} */}
-
-
-	  <h1 style={click ? {width: "105px" , transition : ".2s"}:{width: "272px"}}  className="menu scrollbox mt-[-1px]  bg-white flow  border p-5 border-slate-200 ">
+	  <h1 style={click ? {width: "105px" ,opacity:"0.7" , transition : ".2s"}:{width: "272px",opacity:"0.7" }}  className="menu scrollbox mt-[-1px]   bg-white flow  border p-5 border-slate-200 ">
 
       <div   className="scrollbox-inner">
 						<ul  className="">
@@ -81,7 +75,7 @@ const Menubar = ({click}) => {
 									className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Products</span></a> </NavLink> }</li>	
 									<li>
 									{click ? <NavLink to={"/coupons"}> <a className="hover:text-orange-300 transition duration-400  p-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg> </a> </NavLink> : <NavLink to={"/coupons"}> <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>Coupons</span></a> </NavLink> }</li>								
-									<li>{click ? <a  className="hover:text-orange-300 transition duration-400 "> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg> </a> : <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg><span>Visit Store</span></a>}</li>
+									<li>{click ? <NavLink to={"/product"}> <a  className="hover:text-orange-300 transition duration-400 "> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg> </a> </NavLink> : <NavLink to={"/product"}> <a className="hover:text-orange-300 transition duration-400  flex gap-2 pt-2 pb-2 " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg><span>Visit Store</span></a> </NavLink>}</li>
 								</ul>
 								<div className="w-full h-full border-slate-100 border"></div>								
 							</li>

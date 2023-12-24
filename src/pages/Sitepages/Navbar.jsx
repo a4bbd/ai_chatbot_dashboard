@@ -1,5 +1,5 @@
 import React from "react";
-import state_of_foods from "../assets/state_of_foods.jpg";
+import state_of_foods from "../../assets/state_of_foods.jpg"
 const Navbar = () => {
   return (
     <div>
@@ -27,6 +27,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+      
     </div>
   );
 };

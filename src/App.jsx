@@ -14,6 +14,8 @@ import Profile from "./components/My_Profile/Profile";
 import Importitems from "./pages/importItems/Importitems";
 import Coupons from "./pages/Coupons/Coupons";
 import CouponForm from "./pages/CouponForm/CouponForm";
+import Product from "./pages/Sitepages/Product";
+import Navbar from "./pages/Sitepages/Navbar"
 function App() {
   const Layout = ()=>{
 
@@ -35,11 +37,12 @@ function App() {
              <Outlet />
          </div>
         </div>
+        <Navbar />
       </div>
     )
   };
   const router = createBrowserRouter([
-    {
+    {  
       path : "/",
       element : <Layout />,
       children:[
@@ -79,9 +82,12 @@ function App() {
           element : <CouponForm />
         }
 
-      ]
+      ],
+    },{
+      path:"/product",
+      element : <Navbar />
     },
-  
+     
   ]);
   return <RouterProvider router={router} />;
   
