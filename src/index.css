@@ -86,7 +86,7 @@ body{
   border-radius: 50%;
   object-fit: cover;
 }
-.scroll__bar{
+/* .scroll__bar{
   height: 95vh;
   overflow-y: scroll;
   width: 267px;
@@ -109,12 +109,12 @@ body{
   opacity: 0.1;
   border-radius: 100vh;
   
-}
+} */
 
 /* hide the main scroll bar  */
-body {
+/* body {
   overflow: hidden; 
-}
+} */
 
 
 

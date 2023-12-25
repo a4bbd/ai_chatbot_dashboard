@@ -63,6 +63,7 @@ const Product = () => {
                   <button className='bg-black mt-2 text-white font-bold py-3 px-4  rounded'> <FontAwesomeIcon icon={faComment} /> Comment</button>
                   <p className='mt-2'> <FontAwesomeIcon icon={faComment} /> Comment </p>
                  </div>
+                 
         </div>
     );
 };

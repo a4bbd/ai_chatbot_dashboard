@@ -37,7 +37,6 @@ function App() {
              <Outlet />
          </div>
         </div>
-        <Navbar />
       </div>
     )
   };
@@ -83,9 +82,6 @@ function App() {
         }
 
       ],
-    },{
-      path:"/product",
-      element : <Navbar />
     },
      
   ]);

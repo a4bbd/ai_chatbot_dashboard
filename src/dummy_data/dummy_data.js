@@ -659,3 +659,46 @@ export const products = [
       create_by:"Admin",
     },
   ]
+
+export const cateGoriesitem = [
+  {
+    src : "https://app.aichatbot.xyz/assets/img/icon/shop.png",
+    title : "All Items"
+  },
+  {
+    src : "https://app.aichatbot.xyz/upload/ecommerce/category_64_1700305600146733.jpg",
+    title : "Cake"
+  },{
+    src : "https://app.aichatbot.xyz/upload/ecommerce/category_64_1700299424442611.png",
+    title : "Chocolate"
+  },{
+    src : "https://app.aichatbot.xyz/upload/ecommerce/category_64_1699855818133095.jpg",
+    title : "Fast Food"
+  },{
+    src : "https://app.aichatbot.xyz/upload/ecommerce/category_64_1700304263299412.png",
+    title : "Fruits"
+  }
+]
+
+export const cartItem = [
+  {
+    src : "	https://app.aichatbot.xyz/upload/ecommerce/product_64_1700305889440023.jpg",
+    price : "50",
+    title : "Dry Cake"
+  }
+  ,{
+    src : "https://app.aichatbot.xyz/upload/ecommerce/product_64_1700304497751769.jpg",
+    price : 120,
+    title : "Mango"
+  },
+  {
+    src : "https://app.aichatbot.xyz/upload/ecommerce/product_64_1700306039256746.jpg",
+    price : 150,
+    title : "Pancake"
+  },
+  {
+    src:"https://app.aichatbot.xyz/upload/ecommerce/product_64_1699856107106976.jpg",
+    price : 120,
+    title : "Sandwich"
+   }
+]

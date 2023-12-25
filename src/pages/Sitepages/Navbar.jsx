@@ -1,9 +1,11 @@
 import React from "react";
 import state_of_foods from "../../assets/state_of_foods.jpg"
+import CategoriesStore from "./CategoriesStore";
+import "./Navbar.css"
 const Navbar = () => {
   return (
-    <div>
-      <div className="h-[400px] w-[1500px] mx-auto">
+    <div className="navbar h-full">
+      <div className="h-full w-[1500px] mx-auto">
         <div className="relative">
           <img
             className="h-[400px] w-[1500px] object-center  my-4 mx-auto object-cover rounded-lg"
@@ -22,10 +24,11 @@ const Navbar = () => {
           <button className="bg-amber-500 p-3 rounded-md px-5 hover:bg-amber-600">
             Edit Profile
           </button>
-          <button className="bg-amber-500 p-3 rounded-md px-5 hover:bg-amber-600">
+          <button className="bg-amber-500 p-3 navbar rounded-md px-5 hover:bg-amber-600">
             Another
           </button>
         </div>
+        <CategoriesStore />
       </div>
       
     </div>
