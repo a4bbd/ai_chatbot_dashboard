@@ -3,13 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCreditCard,
     faPaperPlane,
-    faComment
+    faComment,
+    faHouse,
+    faCartShopping,
+    faRightToBracket
   } from "@fortawesome/free-solid-svg-icons";
 import product_1 from "../../assets/product_1.jpg"
+import { NavLink } from 'react-router-dom';
+import SingupForm from './SingupForm';
 const Product = () => {
     return (
-        <div className='h-[2000px] w-full bg-slate-50 mb-5'>
-                 <div className='max-w-7xl h-[1000px] mt-2 bg-white mx-auto'>
+        <div className=' w-full relative  mb-5'>
+                 <div className='max-w-7xl  h-[1000px] mt-2 bg-white mx-auto'>
                        <div className='grid p-3 grid-cols-3 gap-3'>
                            <div>
                            <img src={product_1} />
@@ -54,7 +59,7 @@ const Product = () => {
                            </div>
                        </div>
                  </div>
-                 <div className='max-w-7xl p-4 h-64 mt-3 bg-white mx-auto'>
+                 <div className='max-w-7xl p-4 h-72 mt-3 bg-white mx-auto'>
                   <div className='flex  gap-2 items-center justify-start  '>
                     <FontAwesomeIcon icon={faPaperPlane} />
                     <p>Leave a comment</p>
@@ -63,7 +68,13 @@ const Product = () => {
                   <button className='bg-black mt-2 text-white font-bold py-3 px-4  rounded'> <FontAwesomeIcon icon={faComment} /> Comment</button>
                   <p className='mt-2'> <FontAwesomeIcon icon={faComment} /> Comment </p>
                  </div>
-                 
+        <div className='fixed bg-slate-100 shadow-2xl  bottom-0 left-0 right-0'>
+          <ul  className='flex gap-4 justify-center items-center '>
+            <li><NavLink to={"/store"}> <FontAwesomeIcon className='w-8 h-8' icon={faHouse} /> <p>Home</p> </NavLink></li>
+            <li><button><FontAwesomeIcon className='w-8 h-8' icon={faCartShopping} /> <p>Cart</p>  </button></li>
+            <li><FontAwesomeIcon className='w-8 h-8' icon={faRightToBracket} /><SingupForm trigger={false}></SingupForm> <span className='block'>Login</span>  </li>
+          </ul>
+        </div>
         </div>
     );
 };

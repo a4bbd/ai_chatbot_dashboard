@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .menu-arrow {
     display: flex;
     text-rendering: auto;

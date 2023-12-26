@@ -700,5 +700,16 @@ export const cartItem = [
     src:"https://app.aichatbot.xyz/upload/ecommerce/product_64_1699856107106976.jpg",
     price : 120,
     title : "Sandwich"
-   }
+   },
+  {
+    src:"https://app.aichatbot.xyz/upload/ecommerce/product_64_1699856107106976.jpg",
+    price : 120,
+    title : "Sandwich"
+   },
+  {
+    src:"https://app.aichatbot.xyz/upload/ecommerce/product_64_1699856107106976.jpg",
+    price : 120,
+    title : "Sandwich"
+   },
+
 ]

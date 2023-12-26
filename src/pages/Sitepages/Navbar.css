@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+.store_scrollbar{
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+}
+
+.store_scrollbar::-webkit-scrollbar {
+    width: 7px; 
+    transition-duration: 5s;
+    
+  }
+  
+  /* Track */
+.store_scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+  }
+   
+  /* Handle */
+.store_scrollbar::-webkit-scrollbar-thumb {
+    background: #EBEBEB;
+  opacity: 0.1;
+  border-radius: 100vh;
+}

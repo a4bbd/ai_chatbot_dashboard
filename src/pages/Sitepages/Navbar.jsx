@@ -2,9 +2,10 @@ import React from "react";
 import state_of_foods from "../../assets/state_of_foods.jpg"
 import CategoriesStore from "./CategoriesStore";
 import "./Navbar.css"
+import Product from "./Product";
 const Navbar = () => {
   return (
-    <div className="navbar h-full">
+    <div className="navbar store_scrollbar h-full">
       <div className="h-full w-[1500px] mx-auto">
         <div className="relative">
           <img
@@ -28,7 +29,7 @@ const Navbar = () => {
             Another
           </button>
         </div>
-        <CategoriesStore />
+        <CategoriesStore /> 
       </div>
       
     </div>

@@ -7,12 +7,13 @@ import {
   } from "@fortawesome/free-solid-svg-icons";
 import {cartItem} from "../../dummy_data/dummy_data";
 import {cateGoriesitem} from "../../dummy_data/dummy_data"
+import { Link } from 'react-router-dom';
 const CategoriesStore = () => {
     return (
-        <div>
-        <div className="category_container mt-8 gap-3 flex xscroll" >
+        <div className='mb-5'>
+        <div className="category_container  mt-8 gap-3 flex xscroll" >
 
-      {cateGoriesitem.map((data)=>( <div className='border rounded-lg p-3 '>
+      {cateGoriesitem.map((data)=>( <div className='border  border-slate-300 rounded-lg p-3 '>
                <a className=''>
                 <img className='w-10 object-cover rounded container mx-auto h-10' src={data.src} /> 
                  <p className='text-blue-400 mt-2'>{data.title}</p>
@@ -22,14 +23,15 @@ const CategoriesStore = () => {
 
         <div className='flex flex-wrap mt-2 w-full gap-4'>
         {cartItem.map((data)=> ( <ul class="  bg-white   mt-1 ">
-                  <li className="media gap-2  flex border border-slate-200 rounded-md align-items-center">                 
+                  <li className="media gap-2  flex border border-slate-300 rounded-md align-items-center">                 
                      <a href="https://app.aichatbot.xyz/ecommerce/product/22"><img src={data.src} width="110" height="110" className="mr-2 h-full object-cover rounded-l-lg"  />
                      </a>
                     
                                         
                     <div class="media-body  pl-0 pr-2">
                       <div className="media-title mb-1">
-                        <a href="https://app.aichatbot.xyz/ecommerce/product/22" className="text-dark text-xs leading-5">{data.title}</a>
+                       <Link to={"/product"}><a href="https://app.aichatbot.xyz/ecommerce/product/22" className="text-dark hover:underline text-xs leading-5">{data.title}</a></Link> 
+                        {/* <a href="https://app.aichatbot.xyz/ecommerce/product/22" className="text-dark hover:underline text-xs leading-5">{data.title}</a> */}
                         <span class="mt-1 text-xs leading-5 block text-small">${data.price}</span>
                                       
                       </div>

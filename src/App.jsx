@@ -83,7 +83,13 @@ function App() {
 
       ],
     },
-     
+     {
+      path:"/store",
+      element: <Navbar />
+     },{
+      path : "/product",
+      element : <Product />
+     }
   ]);
   return <RouterProvider router={router} />;
   
