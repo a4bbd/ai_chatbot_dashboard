@@ -19,7 +19,7 @@ const Header = ({getValue}) => {
     return (
         <>
         <div className='header w-full flex'>
-              <div style={click ? {width:"50px"}: {}}  className='header-left ml-[58px]  py-0 relative w-[253px] h-[60px]'>
+              <div style={click ? {width:"50px"}: {}}  className='header-left ml-[58px]  py-0 relative w-[253px] h-[59px]'>
               {/* flex justify-content w-10 content-center */}
                     <a className='sm__logo '>{ click ? <img  className='logosmall ml-[-2rem] mt-1'  src={logosmall} /> : <img className='w-[140px] ' src={logo} /> } </a>
                      

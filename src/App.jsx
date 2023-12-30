@@ -16,6 +16,10 @@ import Coupons from "./pages/Coupons/Coupons";
 import CouponForm from "./pages/CouponForm/CouponForm";
 import Product from "./pages/Sitepages/Product";
 import Navbar from "./pages/Sitepages/Navbar"
+import AddProductform from "./pages/AddProductForm/AddProductform";
+import Orders from "./pages/Orders/Orders";
+import ProductEdit from "./pages/ProductEdit/ProductEdit";
+import ProductDetils from "./pages/ProductDetails/ProductDetils";
 function App() {
   const Layout = ()=>{
 
@@ -79,6 +83,18 @@ function App() {
         },{
           path : "/couponform",
           element : <CouponForm />
+        },{
+          path:"/addproduct",
+          element : <AddProductform />
+        },{
+          path:"/orders",
+          element : <Orders />
+        },{
+          path:"/productedit",
+          element : <ProductEdit />
+        },{
+          path:"/productdetails",
+          element : <ProductDetils />
         }
 
       ],

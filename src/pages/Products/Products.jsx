@@ -116,7 +116,7 @@ const Products = () => {
                   </div>
                 </div>
 
-                <NavLink to={"/create_item"}>
+                <NavLink to={"/addproduct"}>
                   <button
                     onClick={() => setAddproduct(!addproduct)}
                     className="ml-3 pl-2 pr-2 text-lg rounded transition duration-300 ease-in-out bg-orange-500 hover:bg-slate-400 text-white">
@@ -193,12 +193,12 @@ const Products = () => {
                     <td>Admin</td>
                     <td>{data.createdAt}</td>
                     <td className="flex ">
-                      <a class="me-3" href="product-details.html">
+                      <NavLink to={"/productdetails"}>
                         <img src={eye} alt="img" />
-                      </a>
-                      <a class="me-3" href="editproduct.html">
-                        <img src={edit} alt="img" />
-                      </a>
+                      </NavLink>
+                      <NavLink to={"/productedit"}> 
+                        <img className="ml-2 mr-2" src={edit} alt="img" />
+                       </NavLink>
                       <a class="confirm-text" href="javascript:void(0);">
                         <img src={remove} alt="img" />
                       </a>
