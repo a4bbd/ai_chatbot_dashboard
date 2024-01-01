@@ -1,91 +1,109 @@
-import React from 'react';
+import React from "react";
 import barcode from "../../assets/barcode1.png";
-import printer from "../../assets/printer.svg"
-
+import printer from "../../assets/printer.svg";
+import { tableinfo } from "../../dummy_data/dummy_data";
+import mac from "../../assets/product69.jpg"
 const ProductDetils = () => {
-    return (
-        <div>
-            <div class="page-title">
-							<h4 style={{color:"#212B36"}} className='font-bold text-lg'>Product Details</h4>
-							<h6 style={{color:"#555"}} className='text-sm font-normal'>Full details of a product</h6>
-			</div>
-            <div className='grid  w-full grid-cols-6 mt-4 gap-4'>
-                 <div className='bg-white border rounded p-5 h-full col-span-4 '>
+  return (
+    <div>
+      <div class="page-title">
+        <h4 style={{ color: "#212B36" }} className="font-bold text-lg">
+          Product Details
+        </h4>
+        <h6 style={{ color: "#555" }} className="text-sm font-normal">
+          Full details of a product
+        </h6>
+      </div>
+      <div className="grid  w-full grid-cols-6 mt-4 gap-4">
+        <div className="bg-white border rounded p-5 h-full col-span-4 ">
+          <div className="flex  items-center p-4 justify-center border w-64  bar-code-view gap-11">
+            <img src={barcode} alt="barcode" />
+            <a className="block">
+              <img src={printer} alt="print" />
+            </a>
+          </div>
 
-                 <div className="flex  items-center p-4 justify-center border w-64  bar-code-view gap-11"> 
-										<img src={barcode} alt="barcode" />
-										<a className="block">
-											<img src={printer} alt="print" />
-										</a>
-									</div>
-
-                    
-                                    <div className="w-full productdetails">
-										<ul class="product-bar w-full">
-											<li className='flex w-full'>
-												<h4>Product</h4>
-												<h6>Macbook pro	</h6>
-											</li>
-											<li>
-												<h4>Category</h4>
-												<h6>Computers</h6>
-											</li>
-											<li>
-												<h4>Sub Category</h4>
-												<h6>None</h6>
-											</li>
-											<li>
-												<h4>Brand</h4>
-												<h6>None</h6>
-											</li>
-											<li>
-												<h4>Unit</h4>
-												<h6>Piece</h6>
-											</li>
-											<li>
-												<h4>SKU</h4>
-												<h6>PT0001</h6>
-											</li>
-											<li>
-												<h4>Minimum Qty</h4>
-												<h6>5</h6>
-											</li>
-											<li>
-												<h4>Quantity</h4>
-												<h6>50</h6>
-											</li>
-											<li>
-												<h4>Tax</h4>
-												<h6>0.00 %</h6>
-											</li>
-											<li>
-												<h4>Discount Type</h4>
-												<h6>Percentage</h6>
-											</li>
-											<li>
-												<h4>Price</h4>
-												<h6>1500.00</h6>
-											</li>
-											<li>
-												<h4>Status</h4>
-												<h6>Active</h6>
-											</li>
-											<li>
-												<h4>Description</h4>
-												<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h6>
-											</li>
-										</ul>
-									</div>
-
-                 </div>
-
-
-                 <div className='bg-green-500 col-start-5 h-10 col-end-7 '>
-
-                 </div>
-            </div>
+          <div className="w-full productdetails">
+            <table class="border-collapse mt-4 w-full border border-slate-500 table-auto ...">
+              
+              <tbody>
+                <tr>
+                  <td class="border  border-slate-300 ...">Product</td>
+                  <td class="border border-slate-300 ...">Macbook pro</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Category</td>
+                  <td class="border border-slate-300 ...">Computers</td>
+                </tr>
+                <tr>
+                  <td class="border  border-slate-300 ...">Sub Category</td>
+                  <td class="border border-slate-300 ...">None</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Brand</td>
+                  <td class="border border-slate-300 ...">None</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Unit</td>
+                  <td class="border border-slate-300 ...">Piece</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">SKU</td>
+                  <td class="border border-slate-300 ...">PT0001</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Minimum Qty</td>
+                  <td class="border border-slate-300 ...">5</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Quantity</td>
+                  <td class="border border-slate-300 ...">50</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Tax</td>
+                  <td class="border border-slate-300 ...">0.00 %</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Discount Type</td>
+                  <td class="border border-slate-300 ...">Percentage</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Price</td>
+                  <td class="border border-slate-300 ...">1500.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Status</td>
+                  <td class="border border-slate-300 ...">Active</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Description</td>
+                  <td class="border border-slate-300 ...">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</td>
+                </tr>
+              </tbody>
+            </table>
+		   {/* <table className="w-full mt-4 table-auto">
+  <tbody>
+  {tableinfo.map((item)=>( <tr>
+      <td className="border  border-slate-300">{item.name}</td>
+      <td>{item.item}</td>
+      
+    </tr>))}
+    
+  </tbody>
+</table> */}
+          </div>
         </div>
-    );
+
+        <div className="col-start-5 col-end-7">
+        <div className="slider-product border  rounded">
+												<img src={mac} alt="img" />
+												<h4 className="text-center">Macbook Pro</h4>
+												<h6 className="text-center">581kb</h6>
+											</div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ProductDetils;

@@ -911,3 +911,47 @@ export const OrderListData = [
     realStatusColor : "bg-lime-500"
   }
 ]
+
+export const tableinfo = [
+  {
+    name : "Product",
+    item : "Macbook pro"
+  },{
+    name : "Category",
+    item : "Computers"
+  },{
+    name : "Sub Category",
+    item : "None"
+  },{
+    name : "Brand",
+    item : "None"
+  },
+  {
+    name : "Unit",
+    item : "Piece"
+  },{
+    name : "SKU",
+    item : "PT0001"
+  },{
+    name : "Minimum Qty",
+    item : "5"
+  },{
+    name : 'Quantity',
+    item : 50
+  },{
+    name: "Tax",
+    item : "0.00 %"
+  },{
+    name : "Discount Type",
+    item : "Percentage"
+  },{
+    name :"Price",
+    item :"1500.00"
+  },{
+    name :"Status",
+    item :"active"
+  },{
+    name : "Description",
+    item : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+  }
+]
