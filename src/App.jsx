@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Application from "./pages/Application/Application";
 import Menubar from "./components/Menubar/Menubar"
-import Chat from "./pages/Chat/chat";
+// import Chat from "./pages/Chat/chat";
 import Calender from "./pages/Calender/Calender";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
