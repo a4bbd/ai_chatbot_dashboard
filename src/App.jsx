@@ -20,6 +20,8 @@ import AddProductform from "./pages/AddProductForm/AddProductform";
 import Orders from "./pages/Orders/Orders";
 import ProductEdit from "./pages/ProductEdit/ProductEdit";
 import ProductDetils from "./pages/ProductDetails/ProductDetils";
+import DeliveryPoints from "./pages/DeliveryPoints/DeliveryPoints";
+import Deliverypointsform from "./pages/DeliveryPoints/Deliverypointsform";
 function App() {
   const Layout = ()=>{
 
@@ -95,6 +97,12 @@ function App() {
         },{
           path:"/productdetails",
           element : <ProductDetils />
+        },{
+          path : "/deliverypoint",
+          element : <DeliveryPoints />
+        },{
+          path : "/deliverypointfrom",
+          element : <Deliverypointsform />
         }
 
       ],
